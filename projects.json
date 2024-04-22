@@ -1,0 +1,33 @@
+[
+    {
+      "name": "Sticky Note App",
+      "description": "A Greenfield project creating a Sticky Notes web app. Uses multiple components to build the classic sticky note UI with the ability to add, edit, delete, and search for notes.",
+      "skills": ["ES6", "JSX", "Managing data flow", "Manipulating the DOM"],
+      "tools": ["CodeSandbox"]
+    },
+    {
+      "name": "NameTag Generator",
+      "description": "Create and manage name tags quickly and efficiently with our straightforward name tag generator. Easily input, edit, and delete names for your events, conferences, or meetings without the hassle of complex styling options.",
+      "skills": ["ES6", "JSX", "Managing data flow"],
+      "tools": ["CodeSandbox"]
+    },
+    {
+      "name": "Guess the Word game",
+      "description": "Challenge your vocabulary and deduction skills in our addictive 'Guess the Word' game! Test your word knowledge as you try to decipher the hidden word using only a limited number of guesses. With a variety of difficulty levels and endless word combinations, every round offers a new and exciting challenge. Can you unravel the mystery word before you run out of guesses? Play now and find out!",
+      "skills": ["ES6", "JSX", "Managing data flow"],
+      "tools": ["CodeSandbox", "GitHub"]
+    },
+    {
+      "name": "Unplugged",
+      "description": "A multi-page responsive website coded with Flexbox. This versatile design has several sections, including a Cards design pattern, that can be repurposed for different sites.",
+      "skills": ["CSS3", "Flexbox", "HTML5", "Media Queries", "Responsive typography"],
+      "tools": ["Text Editor", "GitHub"]
+    },
+    {
+      "name": "Responsive Rogue Pickings",
+      "description": "A simple homepage perfect for a pop-up restaurant or food truck. Originally a static website, I converted it into a responsive design using Flexbox.",
+      "skills": ["CSS3", "Flexbox", "HTML5", "Media Queries", "Responsive typography"],
+      "tools": ["Text Editor", "GitHub"]
+    }
+  ]
+  
