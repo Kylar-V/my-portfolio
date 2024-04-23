@@ -1,0 +1,31 @@
+body {
+    font-family: 'cabin', 'sedan';
+}
+
+.content-wrapper {
+    width: 1200px;
+    margin: 0 auto;
+    overflow: auto;
+    background-color: #351D77;
+}
+
+header h1 {
+    color: #E8F0E4;
+}
+
+header h2 {
+    color: #E8F0E4;
+}
+
+header nav {
+    color: #E8F0E4;
+}
+
+p {
+    color: #E8F0E4;
+}
+
+main h2 {
+    color: #E8F0E4;
+
+}
