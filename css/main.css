@@ -65,21 +65,20 @@ body {
   margin: 0;
 }
 
-
 #languages-skills {
   background-color: #7ED6DF;
   color: #1E3F66;
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
   padding: 40px 20px;
   margin: 0px 0;
   width: 100%;
   margin-left: auto;
   margin-right: auto;
+  
 }
-
 
 .languages-panel h2,
 .skills-panel h2 {
@@ -89,18 +88,18 @@ body {
 
 .languages-panel,
 .skills-panel {
+  flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width:100%;
+  width: 100%;
   margin: 20px auto;
 }
 
 .languages-list,
 .skills-list {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   padding: 0;
@@ -109,9 +108,8 @@ body {
 
 .languages-list li,
 .skills-list li {
-  text-align: center;
   margin: 10px;
-  list-style-type: none;
+  list-style: none;
 }
 
 .languages-list li img,
@@ -140,8 +138,8 @@ body {
 
 .skills-list {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
   list-style: none;
   padding: 0;
   margin: 0;
