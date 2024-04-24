@@ -1,31 +1,120 @@
 body {
-    font-family: 'cabin', 'sedan';
+  font-family: "cabin", "sedan";
+}
+.header-section {
+  width: 100%;
+  padding: 30px 0;
+  background-color: #351d77;
+  color: antiquewhite;
+}
+/* Reset margin and padding for the ul */
+.header-section nav ul {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
-.content-wrapper {
-    width: 1200px;
-    margin: 0 auto;
-    overflow: auto;
-    background-color: #351D77;
+.header-section nav ul li {
+  margin-right: 0 20px;
 }
 
-header h1 {
-    color: #E8F0E4;
+.header-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 20px;
+  padding-top: 20px;
 }
 
-header h2 {
-    color: #E8F0E4;
+/* Center the title and h2 */
+.header-title h1 .header-title h2 {
+  margin-top: 0;
+  padding-top: 0;
+}
+.header-title h1 {
+  margin-bottom: 0.5em;
 }
 
-header nav {
-    color: #E8F0E4;
+/* Add margin to h2 */
+.header-title h2 {
+  margin-top: 0; /* Adjust as needed */
 }
 
-p {
-    color: #E8F0E4;
+.about,
+.skills,
+.tools {
+  background-color: #ec91c4;
+  color: #351d77;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  margin: 20px 0;
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-main h2 {
-    color: #E8F0E4;
-
+.about h2,
+.skills h2,
+.tools h2 {
+  margin-bottom: 20px;
+  text-align: center;
 }
+
+/* Center the projects section */
+#projects {
+    text-align: center;
+  }
+  
+  /* Style each project */
+  .project {
+    background-color: #E8F0E4;
+    color: #351D77;
+    padding: 40px;
+    margin-bottom: 40px;
+  }
+  
+  /* Center the project titles */
+  .project h2 {
+    text-align: center;
+  }
+  
+  /* Style the project descriptions */
+  .project p {
+    text-align: left; /* Align text to the left */
+  }
+  
+  /* Style the project links */
+  .project h4 {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    border: 2px solid #E9B14C;
+    color: #351D77;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  /* Hover effect for project links */
+  .project h4 a:hover {
+    background-color: #E9B14C;
+    color: white;
+  }
+  
+  /* Center the project skills */
+  .project ul {
+    text-align: center; /* Center the bullet points */
+  }
+  
+  .project ul li {
+    display: inline-block; /* Display list items inline */
+    margin: 0 10px; /* Add margin between list items */
+  }
+  
