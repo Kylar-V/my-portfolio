@@ -1,12 +1,15 @@
 body {
   font-family: "cabin", "sedan";
+  width: 100%;
 }
+
 .header-section {
   width: 100%;
   padding: 30px 0;
   background-color: #9b59b6;
   color: #ffffff;
 }
+
 /* Reset margin and padding for the ul */
 .header-section nav ul {
   display: flex;
@@ -34,7 +37,6 @@ body {
 /* Center the title and h2 */
 .header-title h1,
 .header-title h2 {
-  /* Combined selector */
   margin-top: 0;
   padding-top: 0;
 }
@@ -44,47 +46,76 @@ body {
 
 /* Add margin to h2 */
 .header-title h2 {
-  margin-top: 0; /* Adjust as needed */
+  margin-top: 0;
 }
 
-#about,
-#Languages\&skills {
-  /* Fixed selectors to match IDs in HTML */
+#about {
+  background-color: #EEE4F0;
+  color: #351D77;
+  width: 100%;
+  padding: 40px 0;
+  text-align: center;
+}
+
+#about h2 {
+  margin: 0;
+}
+
+#about p {
+  margin: 0;
+}
+
+
+#languages-skills {
   background-color: #7ED6DF;
   color: #1E3F66;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-around;
   align-items: center;
-  justify-content: center;
   padding: 40px 20px;
-  margin: 20px 0;
-  width: 85%;
+  margin: 0px 0;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
 }
 
-#about h2,
-#Languages\&skills h2,
-.skills h2 {
-  /* Fixed selectors to match IDs in HTML */
+
+.languages-panel h2,
+.skills-panel h2 {
   margin-bottom: 20px;
   text-align: center;
 }
 
-.languages-list {
+.languages-panel,
+.skills-panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width:100%;
+  margin: 20px auto;
+}
+
+.languages-list,
+.skills-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  padding: 0;
+  margin: 0;
 }
 
-.languages-list li {
+.languages-list li,
+.skills-list li {
   text-align: center;
   margin: 10px;
   list-style-type: none;
 }
 
-.languages-list li img {
+.languages-list li img,
+.skills-list li img {
   width: 50px;
   height: auto;
 }
