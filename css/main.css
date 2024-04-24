@@ -4,8 +4,8 @@ body {
 .header-section {
   width: 100%;
   padding: 30px 0;
-  background-color: #351d77;
-  color: antiquewhite;
+  background-color: #9b59b6;
+  color: #ffffff;
 }
 /* Reset margin and padding for the ul */
 .header-section nav ul {
@@ -18,7 +18,7 @@ body {
 }
 
 .header-section nav ul li {
-  margin-right: 0 20px;
+  margin-right: 0 20px; /* Fixed margin shorthand */
 }
 
 .header-title {
@@ -32,7 +32,9 @@ body {
 }
 
 /* Center the title and h2 */
-.header-title h1 .header-title h2 {
+.header-title h1,
+.header-title h2 {
+  /* Combined selector */
   margin-top: 0;
   padding-top: 0;
 }
@@ -45,11 +47,11 @@ body {
   margin-top: 0; /* Adjust as needed */
 }
 
-.about,
-.skills,
-.tools {
-  background-color: #ec91c4;
-  color: #351d77;
+#about,
+#Languages\&skills {
+  /* Fixed selectors to match IDs in HTML */
+  background-color: #7ED6DF;
+  color: #1E3F66;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -61,60 +63,115 @@ body {
   margin-right: auto;
 }
 
-.about h2,
-.skills h2,
-.tools h2 {
+#about h2,
+#Languages\&skills h2,
+.skills h2 {
+  /* Fixed selectors to match IDs in HTML */
   margin-bottom: 20px;
   text-align: center;
 }
 
+.languages-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.languages-list li {
+  text-align: center;
+  margin: 10px;
+  list-style-type: none;
+}
+
+.languages-list li img {
+  width: 50px;
+  height: auto;
+}
+
+.skills {
+  background-color: #ec91c4;
+  color: #351d77;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px 20px;
+  margin: 20px 0;
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.skills h2 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.skills-list li {
+  text-align: center;
+  margin: 10px;
+}
+
+.skills-list li img {
+  width: 50px;
+  height: 50px;
+}
+
 /* Center the projects section */
 #projects {
-    text-align: center;
-  }
-  
-  /* Style each project */
-  .project {
-    background-color: #E8F0E4;
-    color: #351D77;
-    padding: 40px;
-    margin-bottom: 40px;
-  }
-  
-  /* Center the project titles */
-  .project h2 {
-    text-align: center;
-  }
-  
-  /* Style the project descriptions */
-  .project p {
-    text-align: left; /* Align text to the left */
-  }
-  
-  /* Style the project links */
-  .project h4 {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 10px 20px;
-    border: 2px solid #E9B14C;
-    color: #351D77;
-    text-decoration: none;
-    transition: background-color 0.3s, color 0.3s;
-  }
-  
-  /* Hover effect for project links */
-  .project h4 a:hover {
-    background-color: #E9B14C;
-    color: white;
-  }
-  
-  /* Center the project skills */
-  .project ul {
-    text-align: center; /* Center the bullet points */
-  }
-  
-  .project ul li {
-    display: inline-block; /* Display list items inline */
-    margin: 0 10px; /* Add margin between list items */
-  }
-  
+  text-align: center;
+}
+
+/* Style each project */
+.project {
+  background-color: #e8f0e4;
+  color: #351d77;
+  padding: 40px;
+  margin-bottom: 40px;
+}
+
+/* Center the project titles */
+.project h2 {
+  text-align: center;
+}
+
+/* Style the project descriptions */
+.project p {
+  text-align: left; /* Align text to the left */
+}
+
+/* Style the project links */
+.project h4 {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  border: 2px solid #e9b14c;
+  color: #351d77;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Hover effect for project links */
+.project h4 a:hover {
+  background-color: #e9b14c;
+  color: white;
+}
+
+/* Center the project skills */
+.project ul {
+  text-align: center; /* Center the bullet points */
+}
+
+.project ul li {
+  display: inline-block; /* Display list items inline */
+  margin: 0 10px; /* Add margin between list items */
+}
