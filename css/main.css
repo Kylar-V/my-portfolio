@@ -53,7 +53,7 @@ body {
   background-color: #EEE4F0;
   color: #351D77;
   width: 100%;
-  padding: 40px 0;
+  padding: 80px 0;
   text-align: center;
 }
 
@@ -157,25 +157,34 @@ body {
 
 /* Center the projects section */
 #projects {
-  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background-color: #E8F0E4;
+  color: #351D77;
+  overflow: hidden;
 }
 
 /* Style each project */
 .project {
-  background-color: #e8f0e4;
-  color: #351d77;
-  padding: 40px;
-  margin-bottom: 40px;
+width: 45%;
+margin: 20px;
+padding: 20px;
+box-sizing: border-box;
+}
+
+.project img {
+  width: 150px;
+  height: auto;
+  display: block;
+  margin: 0 auto 20px;
 }
 
 /* Center the project titles */
-.project h2 {
-  text-align: center;
-}
-
-/* Style the project descriptions */
+.project h2, 
 .project p {
-  text-align: left; /* Align text to the left */
+  text-align: center;
+  margin: 0 0 10px;
 }
 
 /* Style the project links */
@@ -197,10 +206,36 @@ body {
 
 /* Center the project skills */
 .project ul {
-  text-align: center; /* Center the bullet points */
+  list-style-type: none;
+  padding: 0;
 }
 
 .project ul li {
-  display: inline-block; /* Display list items inline */
-  margin: 0 10px; /* Add margin between list items */
+  margin: 20px; /* Add margin between list items */
+}
+
+.project ul li:before {
+  content: "\2022";
+  color: #351D77;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+.project-2 {
+  width: 45%;
+  margin: 20px;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.project-2 img {
+  width: 300px;
+  height: auto;
+  display: block;
+  margin: 0 auto 20px;
 }
