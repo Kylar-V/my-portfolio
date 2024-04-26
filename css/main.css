@@ -13,8 +13,8 @@ body {
 
 /* Header Styles */
 header {
-  background-color: #9b59b6;
-  color: #ffffff;
+  background-color: #351d77;
+  color: #eee4f0;
 }
 
 .header-section {
@@ -46,14 +46,14 @@ header {
 
 /* About Section Styles */
 #about {
-  background-color: #eee4f0;
+  background-color: #ec91c4;
   color: #351d77;
   padding: 80px 0;
 }
 
 /* Languages and Skills Section Styles */
 #languages-skills {
-  background-color: #7ed6df;
+  background-color: #eee4f0;
   color: #1e3f66;
   padding: 40px 0;
 }
@@ -114,7 +114,7 @@ header {
   margin: 0 auto 20px;
 }
 
-.project-2 img{
+.project-2 img {
   width: 150px;
   height: auto;
   display: block;
@@ -177,4 +177,34 @@ header {
   .project-2 {
     width: 100%; /* Full width on smaller screens */
   }
+}
+footer {
+  background-color: #eee4f0;
+  color: #351d77;
+  padding: 40px 20px;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.social-icons a {
+  width: 50px;
+  height: auto;
+  margin: 0 10px;
+}
+
+.location {
+  margin-top: 20px;
 }
