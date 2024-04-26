@@ -1,16 +1,26 @@
+/* Reset CSS */
 body {
-  font-family: "cabin", "sedan";
-  width: 100%;
+  font-family: "Cabin", "Sedan";
+  margin: 0;
 }
 
-.header-section {
-  width: 100%;
-  padding: 30px 0;
+/* Container for content */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Header Styles */
+header {
   background-color: #9b59b6;
   color: #ffffff;
 }
 
-/* Reset margin and padding for the ul */
+.header-section {
+  padding: 30px 0;
+}
+
 .header-section nav ul {
   display: flex;
   justify-content: space-evenly;
@@ -21,63 +31,31 @@ body {
 }
 
 .header-section nav ul li {
-  margin-right: 0 20px; /* Fixed margin shorthand */
+  margin-right: 20px; /* Fix margin */
 }
 
 .header-title {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   text-align: center;
   margin-top: 20px;
   padding-top: 20px;
 }
 
-/* Center the title and h2 */
-.header-title h1,
-.header-title h2 {
-  margin-top: 0;
-  padding-top: 0;
-}
 .header-title h1 {
   margin-bottom: 0.5em;
 }
 
-/* Add margin to h2 */
-.header-title h2 {
-  margin-top: 0;
-}
-
+/* About Section Styles */
 #about {
-  background-color: #EEE4F0;
-  color: #351D77;
-  width: 100%;
+  background-color: #eee4f0;
+  color: #351d77;
   padding: 80px 0;
-  text-align: center;
 }
 
-#about h2 {
-  margin: 0;
-}
-
-#about p {
-  margin: 0;
-}
-
+/* Languages and Skills Section Styles */
 #languages-skills {
-  background-color: #7ED6DF;
-  color: #1E3F66;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 40px 20px;
-  margin: 0px 0;
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  
+  background-color: #7ed6df;
+  color: #1e3f66;
+  padding: 40px 0;
 }
 
 .languages-panel h2,
@@ -88,12 +66,9 @@ body {
 
 .languages-panel,
 .skills-panel {
-  flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  width: 100%;
   margin: 20px auto;
 }
 
@@ -104,11 +79,6 @@ body {
   align-items: center;
   padding: 0;
   margin: 0;
-}
-
-.languages-list li,
-.skills-list li {
-  margin: 10px;
   list-style: none;
 }
 
@@ -118,110 +88,14 @@ body {
   height: auto;
 }
 
-.skills {
-  background-color: #ec91c4;
-  color: #351d77;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 40px 20px;
-  margin: 20px 0;
-  width: 85%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.skills h2 {
-  margin-bottom: 20px;
-  text-align: center;
-}
-
-.skills-list {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.skills-list li {
-  text-align: center;
-  margin: 10px;
-}
-
-.skills-list li img {
-  width: 50px;
-  height: 50px;
-}
-
-/* Center the projects section */
+/* Projects Section Styles */
 #projects {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  background-color: #E8F0E4;
-  color: #351D77;
-  overflow: hidden;
-}
-
-/* Style each project */
-.project {
-width: 45%;
-margin: 20px;
-padding: 20px;
-box-sizing: border-box;
-}
-
-.project img {
-  width: 150px;
-  height: auto;
-  display: block;
-  margin: 0 auto 20px;
-}
-
-/* Center the project titles */
-.project h2, 
-.project p {
-  text-align: center;
-  margin: 0 0 10px;
-}
-
-/* Style the project links */
-.project h4 {
-  display: inline-block;
-  margin-top: 10px;
-  padding: 10px 20px;
-  border: 2px solid #e9b14c;
+  background-color: #e8f0e4;
   color: #351d77;
-  text-decoration: none;
-  transition: background-color 0.3s, color 0.3s;
+  padding: 40px 0;
 }
 
-/* Hover effect for project links */
-.project h4 a:hover {
-  background-color: #e9b14c;
-  color: white;
-}
-
-/* Center the project skills */
-.project ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-.project ul li {
-  margin: 20px; /* Add margin between list items */
-}
-
-.project ul li:before {
-  content: "\2022";
-  color: #351D77;
-  display: inline-block;
-  width: 1em;
-  margin-left: -1em;
-}
-
+.project,
 .project-2 {
   width: 45%;
   margin: 20px;
@@ -233,9 +107,74 @@ box-sizing: border-box;
   align-items: center;
 }
 
-.project-2 img {
-  width: 300px;
+.project-1 img {
+  width: 150px;
   height: auto;
   display: block;
   margin: 0 auto 20px;
+}
+
+.project-2 img{
+  width: 150px;
+  height: auto;
+  display: block;
+  margin: 0 auto 20px;
+}
+
+.project h2,
+.project p,
+.project-2 h2,
+.project-2 p {
+  text-align: center;
+  margin: 0 0 10px;
+}
+
+.project h4 {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  border: 2px solid #e9b14c;
+  color: #351d77;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.project h4 a:hover,
+.project-2 h4 a:hover {
+  background-color: #e9b14c;
+  color: white;
+}
+
+.project ul,
+.project-2 ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.project ul li,
+.project-2 ul li {
+  margin: 20px;
+  text-align: center;
+}
+
+.project ul li:before,
+.project-2 ul li:before {
+  content: "\2022";
+  color: #351d77;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+/* Media Query for Responsive Design */
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 0 10px;
+  }
+
+  .project,
+  .project-2 {
+    width: 100%; /* Full width on smaller screens */
+  }
 }
