@@ -32,17 +32,12 @@ header {
 
 .header-section nav ul li {
   margin-right: 20px;
-  color: fffff0; /* Fix margin */
 }
 
 .header-title {
   text-align: center;
   margin-top: 20px;
   padding-top: 20px;
-}
-
-.header-title h1 {
-  margin-bottom: 0.5em;
 }
 
 nav ul {
@@ -58,16 +53,16 @@ nav ul li {
 nav ul li a {
   text-decoration: none;
   display: inline-block;
-  padding: 10px 20px; /* Adjust padding to make buttons larger or smaller */
-  background-color: #d39625; /* Default button background color */
-  color: #1C1C1C; /* Default button text color */
-  border-radius: 25px; /* Rounded corners */
+  padding: 10px 20px;
+  background-color: #d39625;
+  color: #1C1C1C;
+  border-radius: 25px;
 }
 
 nav ul li a:hover {
-  background-color: #e4bd74; /* Change background color on hover */
+  background-color: #e4bd74;
 }
-  
+
 /* About Section Styles */
 #about {
   background-color: #eee4f0;
@@ -78,23 +73,23 @@ nav ul li a:hover {
 }
 
 #about h2 {
-  margin-bottom: 20px; /* Add margin below the h2 */
-  position: relative; /* Ensure h2 is a positioned element */
+  margin-bottom: 20px;
+  position: relative;
 }
 
 #about h2::after {
-  content: ""; /* Add a pseudo-element after the h2 */
-  position: absolute; /* Position the pseudo-element */
-  bottom: -20px; /* Move the pseudo-element below the h2 */
-  left: 50%; /* Center the pseudo-element horizontally */
-  transform: translateX(-50%); /* Center the pseudo-element horizontally */
-  width: 80%; /* Set the width of the border */
-  height: 1px; /* Set the thickness of the border */
-  background-color: rgb(117, 47, 163); /* Set the color of the border */
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 1px;
+  background-color: rgb(117, 47, 163);
 }
 
 #about p {
-  margin: 40px 0; /* Add margin to the p */
+  margin: 40px 0;
 }
 
 /* Languages and Skills Section Styles */
@@ -142,8 +137,7 @@ nav ul li a:hover {
   padding: 40px 0;
 }
 
-.project,
-.project-2 {
+.project-item {
   width: 45%;
   margin: 20px;
   padding: 20px;
@@ -154,29 +148,20 @@ nav ul li a:hover {
   align-items: center;
 }
 
-.project-1 img {
+.project-item img {
   width: 150px;
   height: auto;
   display: block;
   margin: 0 auto 20px;
 }
 
-.project-2 img {
-  width: 150px;
-  height: auto;
-  display: block;
-  margin: 0 auto 20px;
-}
-
-.project h2,
-.project p,
-.project-2 h2,
-.project-2 p {
+.project-item h3,
+.project-item p {
   text-align: center;
   margin: 0 0 10px;
 }
 
-.project h4 {
+.project-item h4 {
   display: inline-block;
   margin-top: 10px;
   padding: 10px 20px;
@@ -186,27 +171,23 @@ nav ul li a:hover {
   transition: background-color 0.3s, color 0.3s;
 }
 
-.project h4 a:hover,
-.project-2 h4 a:hover {
+.project-item h4 a:hover {
   background-color: #e9b14c;
   color: white;
 }
 
-.project ul,
-.project-2 ul {
+.project-item ul {
   list-style-type: none;
   padding: 0;
   margin: 0;
 }
 
-.project ul li,
-.project-2 ul li {
+.project-item ul li {
   margin: 20px;
   text-align: center;
 }
 
-.project ul li:before,
-.project-2 ul li:before {
+.project-item ul li:before {
   content: "\2022";
   color: #351d77;
   display: inline-block;
@@ -220,11 +201,11 @@ nav ul li a:hover {
     padding: 0 10px;
   }
 
-  .project,
-  .project-2 {
-    width: 100%; /* Full width on smaller screens */
+  .project-item {
+    width: 100%;
   }
 }
+
 footer {
   background-color: #eee4f0;
   color: #351d77;
