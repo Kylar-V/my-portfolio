@@ -1,15 +1,15 @@
-/* Reset CSS */
 body {
   font-family: "Cabin", "Sedan";
   margin: 0;
+  padding: 0;
 }
 
 /* Container for content */
-.container {
-  max-width: 1200px;
+/* .container {
+  max-width: 100%;
   margin: 0 auto;
-  padding: 0 20px;
-}
+  padding: 0 ;
+} */
 
 /* Header Styles */
 header {
@@ -55,7 +55,7 @@ nav ul li a {
   display: inline-block;
   padding: 10px 20px;
   background-color: #d39625;
-  color: #1C1C1C;
+  color: #1c1c1c;
   border-radius: 25px;
 }
 
@@ -135,35 +135,42 @@ nav ul li a:hover {
   background-color: #e8f0e4;
   color: #351d77;
   padding: 40px 0;
+  text-align: center;
+}
+
+.section-title {
+  margin-bottom: 40px;
+}
+
+.project-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* Spread items evenly */
+  gap: 40px; /* Add space between items */
 }
 
 .project-item {
-  width: 45%;
-  margin: 20px;
+  width: calc(50% - 20px); /* Two projects side by side */
   padding: 20px;
   box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  text-align: center;
 }
 
 .project-item img {
-  width: 150px;
+  width: 100%;
   height: auto;
   display: block;
-  margin: 0 auto 20px;
+  margin-bottom: 20px;
 }
 
 .project-item h3,
 .project-item p {
-  text-align: center;
   margin: 0 0 10px;
 }
 
-.project-item h4 {
-  display: inline-block;
-  margin-top: 10px;
+.project-item a {
+  display: block;
+  margin-bottom: 10px;
   padding: 10px 20px;
   border: 2px solid #e9b14c;
   color: #351d77;
@@ -171,7 +178,7 @@ nav ul li a:hover {
   transition: background-color 0.3s, color 0.3s;
 }
 
-.project-item h4 a:hover {
+.project-item a:hover {
   background-color: #e9b14c;
   color: white;
 }
@@ -183,8 +190,7 @@ nav ul li a:hover {
 }
 
 .project-item ul li {
-  margin: 20px;
-  text-align: center;
+  margin: 10px;
 }
 
 .project-item ul li:before {
@@ -193,17 +199,6 @@ nav ul li a:hover {
   display: inline-block;
   width: 1em;
   margin-left: -1em;
-}
-
-/* Media Query for Responsive Design */
-@media screen and (max-width: 768px) {
-  .container {
-    padding: 0 10px;
-  }
-
-  .project-item {
-    width: 100%;
-  }
 }
 
 footer {
@@ -235,4 +230,10 @@ footer {
 
 .location {
   margin-top: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .project-item {
+    width: calc(100% - 20px); /* Full width on smaller screens */
+  }
 }
