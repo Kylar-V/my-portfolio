@@ -13,8 +13,8 @@ body {
 
 /* Header Styles */
 header {
-  background-color: #7251ca;
-  color: #fffff0;
+  background-color: #453E4F;
+  color: #CAC4D1;
 }
 
 .header-section {
@@ -31,7 +31,7 @@ header {
 }
 
 .header-section nav ul li {
-  margin-right: 20px;
+  margin-right: 10px;
 }
 
 .header-title {
@@ -54,7 +54,7 @@ nav ul li a {
   text-decoration: none;
   display: inline-block;
   padding: 10px 20px;
-  background-color: #d39625;
+  background-color: #CAC4D1;
   color: #1c1c1c;
   border-radius: 25px;
 }
@@ -65,8 +65,8 @@ nav ul li a:hover {
 
 /* About Section Styles */
 #about {
-  background-color: #eee4f0;
-  color: #351d77;
+  background-color: #F19494;
+  color: #453E4F;
   padding: 40px 0;
   text-align: center;
   position: relative;
@@ -89,12 +89,15 @@ nav ul li a:hover {
 }
 
 #about p {
-  margin: 40px 0;
+  text-align:justify;
+  line-height: 1.5;
+  margin: 0 auto;
+  max-width: 800px;
 }
 
 /* Languages and Skills Section Styles */
 #languages-skills {
-  background-color: #f0a6d0;
+  background-color: #F7E8E8;
   color: #1e3f66;
   padding: 40px 0;
 }
@@ -116,12 +119,22 @@ nav ul li a:hover {
 .languages-list,
 .skills-list {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   padding: 0;
   margin: 0;
   list-style: none;
   gap: 20px;
+}
+
+.languages-list li img {
+  width: 50px;
+  height: auto;
+}
+
+.languages-list li p {
+  margin-top: 5px;
+  font-size: 14px;
 }
 
 .languages-list li img,
@@ -132,7 +145,7 @@ nav ul li a:hover {
 
 /* Projects Section Styles */
 #projects {
-  background-color: #e8f0e4;
+  background-color: #FFE8D6;
   color: #351d77;
   padding: 40px 0;
   text-align: center;
@@ -169,13 +182,12 @@ nav ul li a:hover {
 }
 
 .project-item a {
-  display: block;
-  margin-bottom: 10px;
-  padding: 10px 20px;
-  border: 2px solid #e9b14c;
-  color: #351d77;
   text-decoration: none;
-  transition: background-color 0.3s, color 0.3s;
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #d39625;
+  color: #1c1c1c;
+  border-radius: 25px;
 }
 
 .project-item a:hover {
@@ -235,5 +247,14 @@ footer {
 @media screen and (max-width: 768px) {
   .project-item {
     width: calc(100% - 20px); /* Full width on smaller screens */
+  }
+  .header-section nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .header-section nav ul li {
+    margin-right: 0;
+    margin-bottom: 10px;
   }
 }
