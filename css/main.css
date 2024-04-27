@@ -1,8 +1,17 @@
 body {
-  font-family: "Cabin", "Sedan";
+  font-family: "Kaisei HarunoUmi", "Margarine";
   margin: 0;
   padding: 0;
 }
+
+h1, h2, h3, h4 {
+  font-family: 'Kaisei HarunoUmi'
+}
+
+p {
+  font-family: 'Margarine';
+}
+
 
 /* Container for content */
 .container {
@@ -13,8 +22,8 @@ body {
 
 /* Header Styles */
 header {
-  background-color: #453E4F;
-  color: #CAC4D1;
+  background-color: #351d77;
+  color: #cac4d1;
 }
 
 .header-section {
@@ -54,19 +63,19 @@ nav ul li a {
   text-decoration: none;
   display: inline-block;
   padding: 10px 20px;
-  background-color: #CAC4D1;
+  background-color: #ec91c4;
   color: #1c1c1c;
   border-radius: 25px;
 }
 
 nav ul li a:hover {
-  background-color: #e4bd74;
+  background-color: #ec6eb6;
 }
 
 /* About Section Styles */
 #about {
-  background-color: #F19494;
-  color: #453E4F;
+  background-color: #eee4f0;
+  color: #1c1c1c;
   padding: 40px 0;
   text-align: center;
   position: relative;
@@ -89,7 +98,7 @@ nav ul li a:hover {
 }
 
 #about p {
-  text-align:justify;
+  text-align: justify;
   line-height: 1.5;
   margin: 0 auto;
   max-width: 800px;
@@ -97,8 +106,8 @@ nav ul li a:hover {
 
 /* Languages and Skills Section Styles */
 #languages-skills {
-  background-color: #F7E8E8;
-  color: #1e3f66;
+  background-color: #e3cae7;
+  color: #1c1c1c;
   padding: 40px 0;
 }
 
@@ -145,8 +154,8 @@ nav ul li a:hover {
 
 /* Projects Section Styles */
 #projects {
-  background-color: #FFE8D6;
-  color: #351d77;
+  background-color: #806e9b;
+  color: #1c1c1c;
   padding: 40px 0;
   text-align: center;
 }
@@ -185,7 +194,7 @@ nav ul li a:hover {
   text-decoration: none;
   display: inline-block;
   padding: 10px 20px;
-  background-color: #d39625;
+  background-color: #e57373;
   color: #1c1c1c;
   border-radius: 25px;
 }
@@ -214,34 +223,42 @@ nav ul li a:hover {
 }
 
 footer {
-  background-color: #eee4f0;
-  color: #351d77;
-  padding: 40px 20px;
+  background-color: #626066;
+  color: #CAC4D1;
+  padding: 140px 0;
 }
 
-.footer {
+.footer-content {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  padding: 40px 20px;
+}
+
+.contact-info, .follow-me, .location {
+  flex: 1;
   text-align: center;
 }
 
 .social-icons {
   display: flex;
   justify-content: center;
-  margin-bottom: 20px;
 }
 
 .social-icons a {
-  width: 50px;
-  height: auto;
   margin: 0 10px;
 }
 
-.location {
-  margin-top: 20px;
+.social-icons img {
+  height: 40px;
+  width: auto;
+}
+
+p {
+  margin: 5px 0;
+}
+
+.copywrite {
+  text-align: center;
 }
 
 @media screen and (max-width: 768px) {
