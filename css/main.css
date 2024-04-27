@@ -1,6 +1,20 @@
 body {
-  font-family: "cabin", "sedan";
-  width: 100%;
+  font-family: "Cabin", "Sedan";
+  margin: 0;
+  padding: 0;
+}
+
+/* Container for content */
+.container {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Header Styles */
+header {
+  background-color: #7251ca;
+  color: #fffff0;
 }
 
 .header-section {
@@ -35,13 +49,18 @@ nav ul li {
   display: inline-block;
   margin-right: 10px;
 }
-.header-title h1 {
-  margin-bottom: 0.5em;
+
+nav ul li a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #d39625;
+  color: #1c1c1c;
+  border-radius: 25px;
 }
 
-/* Add margin to h2 */
-.header-title h2 {
-  margin-top: 0;
+nav ul li a:hover {
+  background-color: #e4bd74;
 }
 
 /* About Section Styles */
@@ -115,76 +134,43 @@ nav ul li {
 #projects {
   background-color: #e8f0e4;
   color: #351d77;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 40px 20px;
-  margin: 20px 0;
-  width: 85%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.skills h2 {
-  margin-bottom: 20px;
+  padding: 40px 0;
   text-align: center;
 }
 
-.skills-list {
+.section-title {
+  margin-bottom: 40px;
+}
+
+.project-grid {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.skills-list li {
-  text-align: center;
-  margin: 10px;
-}
-
-.skills-list li img {
-  width: 50px;
-  height: 50px;
-}
-
-/* Center the projects section */
-#projects {
-  display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
-  background-color: #E8F0E4;
-  color: #351D77;
-  overflow: hidden;
+  justify-content: space-between; /* Spread items evenly */
+  gap: 40px; /* Add space between items */
 }
 
-/* Style each project */
-.project {
-width: 45%;
-margin: 20px;
-padding: 20px;
-box-sizing: border-box;
+.project-item {
+  width: calc(50% - 20px); /* Two projects side by side */
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: center;
 }
 
-.project img {
-  width: 150px;
+.project-item img {
+  width: 100%;
   height: auto;
   display: block;
   margin-bottom: 20px;
 }
 
-/* Center the project titles */
-.project h2, 
-.project p {
-  text-align: center;
+.project-item h3,
+.project-item p {
   margin: 0 0 10px;
 }
 
-/* Style the project links */
-.project h4 {
-  display: inline-block;
-  margin-top: 10px;
+.project-item a {
+  display: block;
+  margin-bottom: 10px;
   padding: 10px 20px;
   border: 2px solid #e9b14c;
   color: #351d77;
@@ -192,8 +178,7 @@ box-sizing: border-box;
   transition: background-color 0.3s, color 0.3s;
 }
 
-/* Hover effect for project links */
-.project h4 a:hover {
+.project-item a:hover {
   background-color: #e9b14c;
   color: white;
 }
@@ -204,8 +189,8 @@ box-sizing: border-box;
   margin: 0;
 }
 
-.project ul li {
-  margin: 20px; /* Add margin between list items */
+.project-item ul li {
+  margin: 10px;
 }
 
 .project-item ul li:before {
@@ -216,11 +201,13 @@ box-sizing: border-box;
   margin-left: -1em;
 }
 
-.project-2 {
-  width: 45%;
-  margin: 20px;
-  padding: 20px;
-  box-sizing: border-box;
+footer {
+  background-color: #eee4f0;
+  color: #351d77;
+  padding: 40px 20px;
+}
+
+.footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -238,6 +225,15 @@ box-sizing: border-box;
 .social-icons a {
   width: 50px;
   height: auto;
-  display: block;
-  margin: 0 auto 20px;
+  margin: 0 10px;
+}
+
+.location {
+  margin-top: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .project-item {
+    width: calc(100% - 20px); /* Full width on smaller screens */
+  }
 }
