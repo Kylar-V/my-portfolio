@@ -17,8 +17,9 @@ h4 {
 }
 
 p {
-  font-family: "Margarine", cursive;
-  font-size: 1.25rem;
+  font-family: "Margarine", sans-serif;
+  margin: 0.3125rem 0;
+  font-size: 1rem; /* Set the default font size for paragraphs */
 }
 
 a {
@@ -92,7 +93,6 @@ nav ul li a:hover {
   padding: 2.5rem 0;
   text-align: center;
   position: relative;
-  
 }
 
 #about h2 {
@@ -113,7 +113,7 @@ nav ul li a:hover {
 }
 
 #about p {
-  font-size: 1.25rem;
+  font-size: 1.25rem; /* Set font size for paragraphs in the about section */
   text-align: justify;
   line-height: 1.5;
   margin: 0 auto;
@@ -153,14 +153,10 @@ nav ul li a:hover {
   gap: 1.25rem;
 }
 
-.languages-list li img {
-  width: 3.125rem;
-  height: auto;
-}
-
-.languages-list li p {
+.languages-list li p,
+.skills-list li p {
   margin-top: 0.3125rem;
-  font-size: 0.875rem;
+  font-size: 0.875rem; /* Set font size for list items in languages and skills */
 }
 
 .languages-list li img,
@@ -204,7 +200,6 @@ nav ul li a:hover {
   margin-bottom: 1.25rem;
 }
 
-
 .project-item p {
   font-size: 1.25rem;
   margin: 0 0 0.625rem;
@@ -212,10 +207,8 @@ nav ul li a:hover {
 }
 
 .projects p {
-  
   padding: 2.5rem 0 1.875rem;
 }
-
 
 .project-item a {
   text-decoration: none;
@@ -287,11 +280,6 @@ footer h3 {
 .social-icons img {
   height: 2.5rem;
   width: auto;
-}
-
-p {
-  margin: 0.3125rem 0;
-  font-size: 1rem;
 }
 
 .copywrite {
