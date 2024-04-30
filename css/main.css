@@ -30,7 +30,6 @@ a {
 .container {
   max-width: 100%;
   margin: 0 auto;
-  padding: 0 1.25rem;
 }
 
 /* Header Styles */
@@ -128,41 +127,39 @@ nav ul li a:hover {
   padding: 2.5rem 0;
 }
 
-.languages-panel h2,
-.skills-panel h2 {
-  margin-bottom: 1.25rem;
-  text-align: center;
-}
-
 .languages-panel,
 .skills-panel {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 1.25rem auto;
+  text-align: center;
+  margin-bottom: 2rem; /* Add some spacing between the panels */
 }
 
 .languages-list,
 .skills-list {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
+  justify-content: space-evenly; /* Evenly space items */
   padding: 0;
-  margin: 0;
   list-style: none;
-  gap: 1.25rem;
+  gap: 0.5rem; /* Reduce the gap between items */
 }
 
-.languages-list li p,
-.skills-list li p {
-  margin-top: 0.3125rem;
-  font-size: 0.875rem; /* Set font size for list items in languages and skills */
+.languages-list li,
+.skills-list li {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
 }
 
 .languages-list li img,
 .skills-list li img {
   width: 3.125rem;
   height: auto;
+}
+
+.languages-list li p,
+.skills-list li p {
+  margin: 0.5rem 0; /* Adjust spacing between icon and text */
+  font-size: 0.875rem;
 }
 
 /* Projects Section Styles */
@@ -213,7 +210,7 @@ nav ul li a:hover {
 .project-item a {
   text-decoration: none;
   display: inline-block;
-  padding: 1rem 0;
+  padding: 1rem 1rem;
   background-color: #e57373;
   color: #1c1c1c;
   border-radius: 1.562rem;
@@ -258,6 +255,7 @@ footer h3 {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  flex-flow: row wrap;
 }
 
 .contact-info,
