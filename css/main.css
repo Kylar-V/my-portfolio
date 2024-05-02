@@ -1,3 +1,4 @@
+/* Base Styles */
 html {
   font-size: 16px;
 }
@@ -13,26 +14,24 @@ h2,
 h3,
 h4 {
   font-family: "Kaisei HarunoUmi", sans-serif;
-  font-size: 1.875rem;
 }
 
 p {
   font-family: "Margarine", sans-serif;
   margin: 0.3125rem 0;
-  font-size: 1rem; /* Set the default font size for paragraphs */
 }
 
 a {
   font-weight: bold;
 }
 
-/* Container for content */
+/* Layout */
 .container {
   max-width: 100%;
   margin: 0 auto;
 }
 
-/* Header Styles */
+/* Header */
 header {
   background-color: #351d77;
   color: #cac4d1;
@@ -62,6 +61,7 @@ header {
   padding-top: 1.25rem;
 }
 
+/* Navigation */
 nav ul {
   list-style-type: none;
   padding: 0;
@@ -85,67 +85,60 @@ nav ul li a:hover {
   background-color: #ec6eb6;
 }
 
-/* About Section Styles */
-#about {
-  background-color: #eee4f0;
-  color: #1c1c1c;
+/* Sections */
+section {
   padding: 2.5rem 0;
   text-align: center;
-  position: relative;
+}
+
+/* About Section */
+#about {
+  background-color: #eee4f0;
 }
 
 #about h2 {
   font-size: 2.5rem;
-  margin-bottom: 1.25rem;
-  position: relative;
 }
 
 #about h2::after {
   content: "";
-  position: absolute;
-  bottom: -1.25rem;
-  left: 50%;
-  transform: translateX(-50%);
+  display: block;
   width: 80%;
   height: 0.0625rem;
   background-color: rgb(117, 47, 163);
+  margin: 0.625rem auto;
 }
 
 #about p {
-  font-size: 1.25rem; /* Set font size for paragraphs in the about section */
-  text-align: justify;
+  font-size: 1.25rem;
   line-height: 1.5;
   margin: 0 auto;
   max-width: 50rem;
-  padding: 2.5rem 0;
 }
 
-/* Languages and Skills Section Styles */
+/* Languages and Skills Section */
 #languages-skills {
   background-color: #e3cae7;
-  color: #1c1c1c;
   padding: 2.5rem 0;
 }
 
-.languages-panel,
-.skills-panel {
-  text-align: center;
-  margin-bottom: 2rem; /* Add some spacing between the panels */
+.languages-panel h2,
+.skills-panel h2 {
+  margin-bottom: 1rem;
 }
 
 .languages-list,
 .skills-list {
+  list-style: none; /* Remove bullet points */
   display: flex;
-  justify-content: space-evenly; /* Evenly space items */
-  padding: 0;
-  list-style: none;
-  gap: 0.5rem; /* Reduce the gap between items */
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
 }
 
 .languages-list li,
 .skills-list li {
   display: flex;
-  justify-content: space-around;
   flex-direction: column;
   align-items: center;
 }
@@ -154,20 +147,19 @@ nav ul li a:hover {
 .skills-list li img {
   width: 3.125rem;
   height: auto;
+  margin-bottom: 0.5rem;
 }
 
 .languages-list li p,
 .skills-list li p {
-  margin: 0.5rem 0; /* Adjust spacing between icon and text */
+  margin: 0;
   font-size: 0.875rem;
 }
 
-/* Projects Section Styles */
+/* Projects Section */
 #projects {
   background-color: #806e9b;
   color: #1c1c1c;
-  padding: 2.5rem 0;
-  text-align: center;
 }
 
 .section-title {
@@ -177,12 +169,12 @@ nav ul li a:hover {
 .project-grid {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between; /* Spread items evenly */
-  gap: 2.5rem; /* Add space between items */
+  justify-content: space-between;
+  gap: 2.5rem;
 }
 
 .project-item {
-  width: calc(50% - 20px); /* Two projects side by side */
+  width: calc(50% - 20px);
   padding: 1.25rem;
   box-sizing: border-box;
   text-align: center;
@@ -200,11 +192,6 @@ nav ul li a:hover {
 .project-item p {
   font-size: 1.25rem;
   margin: 0 0 0.625rem;
-  padding: 2.5rem 0 1.875rem;
-}
-
-.projects p {
-  padding: 2.5rem 0 1.875rem;
 }
 
 .project-item a {
@@ -241,14 +228,11 @@ nav ul li a:hover {
   margin-left: -1em;
 }
 
+/* Footer */
 footer {
   background-color: #626066;
   color: #cac4d1;
   padding: 5rem;
-}
-
-footer h3 {
-  margin-bottom: 30px;
 }
 
 .footer-content {
@@ -283,19 +267,4 @@ footer h3 {
 .copywrite {
   text-align: center;
   padding: 3.75rem 0;
-}
-
-@media screen and (max-width: 768px) {
-  .project-item {
-    width: calc(100% - 20px); /* Full width on smaller screens */
-  }
-  .header-section nav ul {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .header-section nav ul li {
-    margin-right: 0;
-    margin-bottom: 10px;
-  }
 }
