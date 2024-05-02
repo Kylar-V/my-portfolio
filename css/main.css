@@ -61,6 +61,14 @@ header {
   padding-top: 1.25rem;
 }
 
+.header-title h1 {
+  font-size: 3rem;
+}
+
+.header-title h2 {
+  font-size: 2rem;
+}
+
 /* Navigation */
 nav ul {
   list-style-type: none;
@@ -97,13 +105,13 @@ section {
 }
 
 #about h2 {
-  font-size: 2.5rem;
+  font-size: 3rem;
 }
 
 #about h2::after {
   content: "";
   display: block;
-  width: 80%;
+  width: 50%;
   height: 0.0625rem;
   background-color: rgb(117, 47, 163);
   margin: 0.625rem auto;
@@ -119,12 +127,24 @@ section {
 /* Languages and Skills Section */
 #languages-skills {
   background-color: #e3cae7;
-  padding: 2.5rem 0;
+  padding: 5rem 0; /* Add padding to the top and bottom */
 }
 
 .languages-panel h2,
 .skills-panel h2 {
+  font-size: 3rem;
   margin-bottom: 1rem;
+  padding: 2rem;
+}
+
+.languages-panel h2::after,
+.skills-panel h2::after {
+  content: "";
+  display: block;
+  width: 50%;
+  height: 0.0625rem;
+  background-color: rgb(117, 47, 163);
+  margin: 0.625rem auto;
 }
 
 .languages-list,
@@ -132,7 +152,7 @@ section {
   list-style: none; /* Remove bullet points */
   display: flex;
   justify-content: center;
-  gap: 1rem;
+  gap: 4rem; /* Increase the gap between icons */
   flex-wrap: wrap;
 }
 
@@ -153,13 +173,66 @@ section {
 .languages-list li p,
 .skills-list li p {
   margin: 0;
-  font-size: 0.875rem;
+  font-size: 1.2rem;
+}
+
+.languages-panel h2::after,
+.skills-panel h2::after,
+#projects h2::after {
+  content: "";
+  display: block;
+  width: 55%;
+  height: 0.0625rem;
+  margin: 0.625rem auto;
+  animation: lineFadeIn 0.5s ease-in-out forwards;
+}
+
+.languages-panel h2::after {
+  background: linear-gradient(to right, #e3cae7, #351d77);
+}
+
+.skills-panel h2::after {
+  background: linear-gradient(to right, #806e9b, #1c1c1c);
+}
+
+#projects h2::after {
+  background: linear-gradient(to right, #eee4f0, #1c1c1c);
+}
+
+@keyframes lineFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Projects Section */
 #projects {
-  background-color: #806e9b;
+  background-color: #eee4f0;
   color: #1c1c1c;
+}
+
+#projects h2,
+#projects h3 {
+  font-size: 3rem;
+}
+
+#projects h2::after {
+  content: "";
+  display: block;
+  width: 50%;
+  height: 0.0625rem;
+  background-color: rgb(117, 47, 163);
+  margin: 0.625rem auto;
+}
+
+#projects h4 {
+  margin-bottom: 0; /* Remove bottom margin */
+  font-size: 3rem;
 }
 
 .section-title {
@@ -180,21 +253,31 @@ section {
   text-align: center;
 }
 
+/* Projects Section */
 .project-item img {
-  width: 100%;
+  width: 80%;
+  max-width: 100%;
   height: auto;
   display: block;
-  max-width: 100%;
-  max-height: 400px;
-  margin-bottom: 1.25rem;
+  margin: 0 auto 1.25rem;
+  max-height: 300px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-item img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 30px rgba(72, 171, 184, 0.5); /* Semi-transparent black shadow */
 }
 
 .project-item p {
   font-size: 1.25rem;
-  margin: 0 0 0.625rem;
+  line-height: 1.5;
+  margin: 2rem;
+  max-width: 50rem;
 }
 
 .project-item a {
+  font-size: 1.5rem;
   text-decoration: none;
   display: inline-block;
   padding: 1rem 1rem;
@@ -210,7 +293,7 @@ section {
 
 .project-item ul {
   list-style-type: none;
-  padding: 1.875rem 0 2.5rem;
+  padding: 1.25rem 0 0.625rem;
   margin: 0;
 }
 
