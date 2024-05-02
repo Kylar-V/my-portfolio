@@ -61,7 +61,6 @@ header {
   padding-top: 1.25rem;
 }
 
-/* Navigation */
 nav ul {
   list-style-type: none;
   padding: 0;
@@ -98,11 +97,16 @@ section {
 
 #about h2 {
   font-size: 2.5rem;
+  margin-bottom: 1.25rem;
+  position: relative;
 }
 
 #about h2::after {
   content: "";
-  display: block;
+  position: absolute;
+  bottom: -1.25rem;
+  left: 50%;
+  transform: translateX(-50%);
   width: 80%;
   height: 0.0625rem;
   background-color: rgb(117, 47, 163);
@@ -119,21 +123,24 @@ section {
 /* Languages and Skills Section */
 #languages-skills {
   background-color: #e3cae7;
+  color: #1c1c1c;
   padding: 2.5rem 0;
 }
 
-.languages-panel h2,
-.skills-panel h2 {
-  margin-bottom: 1rem;
+.languages-panel,
+.skills-panel {
+  text-align: center;
+  margin-bottom: 2rem; /* Add some spacing between the panels */
 }
 
 .languages-list,
 .skills-list {
   list-style: none; /* Remove bullet points */
   display: flex;
-  justify-content: center;
-  gap: 1rem;
-  flex-wrap: wrap;
+  justify-content: space-evenly; /* Evenly space items */
+  padding: 0;
+  list-style: none;
+  gap: 0.5rem; /* Reduce the gap between items */
 }
 
 .languages-list li,
@@ -152,14 +159,16 @@ section {
 
 .languages-list li p,
 .skills-list li p {
-  margin: 0;
+  margin: 0.5rem 0; /* Adjust spacing between icon and text */
   font-size: 0.875rem;
 }
 
 /* Projects Section */
 #projects {
-  background-color: #806e9b;
+  background-color: #eee4f0;
   color: #1c1c1c;
+  padding: 2.5rem 0;
+  text-align: center;
 }
 
 .section-title {
@@ -180,21 +189,34 @@ section {
   text-align: center;
 }
 
+/* Projects Section */
 .project-item img {
-  width: 100%;
+  width: 80%;
+  max-width: 100%;
   height: auto;
   display: block;
-  max-width: 100%;
-  max-height: 400px;
-  margin-bottom: 1.25rem;
+  margin: 0 auto 1.25rem;
+  max-height: 300px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-item img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 30px rgba(72, 171, 184, 0.5); /* Semi-transparent black shadow */
 }
 
 .project-item p {
   font-size: 1.25rem;
   margin: 0 0 0.625rem;
+  padding: 2.5rem 0 1.875rem;
+}
+
+.projects p {
+  padding: 2.5rem 0 1.875rem;
 }
 
 .project-item a {
+  font-size: 1.5rem;
   text-decoration: none;
   display: inline-block;
   padding: 1rem 1rem;
@@ -210,7 +232,7 @@ section {
 
 .project-item ul {
   list-style-type: none;
-  padding: 1.875rem 0 2.5rem;
+  padding: 1.25rem 0 0.625rem;
   margin: 0;
 }
 
