@@ -234,6 +234,12 @@ section {
   text-align: center;
 }
 
+.project-item > .project-image-link.project-link {
+  border: none;
+  background-color: none;
+
+}
+
 #projects h3 {
   font-size: 2rem;
 }
@@ -273,7 +279,7 @@ section {
 }
 
 .project-item a:hover {
-  transform: scale(1.05);
+  transform: scale(1.15);
   background-color: #e9b14c;
   color: white;
 }
