@@ -4,7 +4,7 @@ html {
 }
 
 body {
-  font-family: "Kaisei HarunoUmi", "Margarine", sans-serif;
+  font-family: "Roboto", sans-serif, "Montserrat", sans-serif;
   margin: 0;
   padding: 0;
 }
@@ -13,11 +13,11 @@ h1,
 h2,
 h3,
 h4 {
-  font-family: "Kaisei HarunoUmi", sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 p {
-  font-family: "Margarine", sans-serif;
+  font-family: "Roboto", sans-serif;
   margin: 0.3125rem 0;
 }
 
@@ -86,9 +86,11 @@ nav ul li a {
   background-color: #ec91c4;
   color: #1c1c1c;
   border-radius: 1.5625rem;
+  transition: transform 0.3s ease;
 }
 
 nav ul li a:hover {
+  transform: scale(1.25);
   background-color: #ec6eb6;
 }
 
@@ -232,6 +234,10 @@ section {
   text-align: center;
 }
 
+#projects h3 {
+  font-size: 2rem;
+}
+
 .project-item h4 {
   margin-bottom: 1rem; /* Reduce margin bottom */
 }
@@ -246,12 +252,12 @@ section {
 }
 
 .project-item img:hover {
-  transform: scale(1.05) rotate(2deg); /* Scale and rotate image on hover */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Add box shadow effect */
+  transform: scale(1.15) rotate(2deg); /* Scale and rotate image on hover */
+  box-shadow: 0 0 10px rgba(236, 6, 6, 0.5); /* Add box shadow effect */
 }
 
 .project-item p {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   margin: 0 0 0.625rem;
 }
 
@@ -260,12 +266,14 @@ section {
   text-decoration: none;
   display: inline-block;
   padding: 1rem 1rem;
-  background-color: #e57373;
+  background-color: #5934be;
   color: #1c1c1c;
   border-radius: 1.562rem;
+  transition: transform 0.3s ease;
 }
 
 .project-item a:hover {
+  transform: scale(1.05);
   background-color: #e9b14c;
   color: white;
 }
@@ -279,7 +287,6 @@ section {
 .project-item ul li {
   margin: 0.625rem;
   font-size: 1.625rem;
-  font-family: "Margarine", cursive;
 }
 
 .project-item ul li:before {
