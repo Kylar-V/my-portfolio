@@ -1,11 +1,19 @@
 /* Variables */
 :root {
-  --main-font: 'Montserrat', sans-serif;
-  --secondary-font: 'Roboto', sans-serif;
+  --main-font: "Montserrat", sans-serif;
+  --secondary-font: "Roboto", sans-serif;
   --primary-color: #351d77;
   --secondary-color: #ec91c4;
   --tertiary-color: #eee4f0;
   --footer-bg-color: #525252;
+
+  /* Font sizes */
+  --font-size-h1: 3rem;
+  --font-size-h2: 2.5rem;
+  --font-size-h3: 2rem;
+  --font-size-h4: 1.4rem;
+  --font-size-p: 1.3rem;
+}
 
 /* Base Styles */
 html {
@@ -28,17 +36,12 @@ h4 {
 p {
   font-family: var(--secondary-font);
   margin: 0.3125rem 0;
-  font-size: 1.2rem;
+  font-size: var(--font-size-p);
 }
 
-a {
-  font-weight: bold;
-}
-
-/* Layout */
-.container {
-  max-width: 100%;
-  margin: 0 auto;
+ul li {
+  font-family: var(--secondary-font);
+  font-size: var(--font-size-p);
 }
 
 /* Header */
@@ -72,11 +75,11 @@ header {
 }
 
 .header-title h1 {
-  font-size: 3rem;
+  font-size: var(--font-size-h1);
 }
 
 .header-title h2 {
-  font-size: 2rem;
+  font-size: var(--font-size-h2);
 }
 
 /* Navigation */
@@ -117,7 +120,7 @@ section {
 }
 
 #about h2 {
-  font-size: 3rem;
+  font-size: var(--font-size-h2);
 }
 
 #about h2::after {
@@ -130,7 +133,7 @@ section {
 }
 
 #about p {
-  font-size: 1.25rem;
+  font-size: var(--font-size-p);
   line-height: 1.5;
   margin: 0 auto;
   max-width: 50rem;
@@ -144,7 +147,7 @@ section {
 
 .languages-panel h2,
 .skills-panel h2 {
-  font-size: 3rem;
+  font-size: var(--font-size-h2);
   margin-bottom: 1rem;
   padding: 2rem;
 }
@@ -164,16 +167,16 @@ section {
 }
 
 .skills-panel h2::after {
-  background: linear-gradient(to right,  #e3cae7, #351d77);
+  background: linear-gradient(to right, #e3cae7, #351d77);
 }
 
 .languages-list,
 .skills-list {
   list-style: none; /* Remove bullet points */
   display: flex;
-  justify-content: center;
-  gap: 4rem; /* Increase the gap between icons */
+  justify-content: center; /* Center the items horizontally */
   flex-wrap: wrap;
+  gap: 2rem; /* Increase the gap between icons */
 }
 
 .languages-list li,
@@ -193,17 +196,22 @@ section {
 .languages-list li p,
 .skills-list li p {
   margin: 0;
-  font-size: 1.2rem;
+  font-size: var(--font-size-p);
 }
 
 /* Projects Section */
 #projects {
   background-color: #8f75d8;
   color: #1c1c1c;
+  padding: 5rem 0; /* Add padding to the top and bottom */
 }
 
 #projects h2 {
-  font-size: 3rem;
+  font-size: var(--font-size-h2);
+}
+
+#projects h4 {
+  font-size: var(--font-size-h4);
 }
 
 #projects h2::after {
@@ -215,19 +223,12 @@ section {
   background: linear-gradient(to right, #e2d3d3a9, #050505d3);
 }
 
-#projects h4 {
-  font-size: 2.5rem;
-}
-
-.section-title {
-  margin-bottom: 2.5rem;
-}
-
 .project-grid {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between; /* Ensure equal spacing between items */
   gap: 2.5rem;
+  margin-top: 2rem; /* Add margin to the top */
 }
 
 .project-item {
@@ -238,11 +239,8 @@ section {
   width: calc(50% - 20px);
 }
 
-#projects h3 {
-  font-size: 2rem;
-}
-
-.project-item h4 {
+.project-item h3 {
+  font-size: var(--font-size-h3);
   margin-bottom: 1rem; /* Reduce margin bottom */
 }
 
@@ -261,12 +259,12 @@ section {
 }
 
 .project-item p {
-  font-size: 1.5rem;
+  font-size: var(--font-size-p);
   margin: 0 0 0.625rem;
 }
 
 .project-item a {
-  font-size: 1.3rem;
+  font-size: var(--font-size-p);
   text-decoration: none;
   display: inline-block;
   padding: 1rem 1rem;
@@ -290,7 +288,7 @@ section {
 
 .project-item ul li {
   margin: 0.625rem;
-  font-size: 1.625rem;
+  font-size: var(--font-size-p);
 }
 
 .project-item ul li:before {
@@ -317,7 +315,7 @@ footer {
 .footer-content p {
   font-family: var(--secondary-font);
   margin: 0.3125rem 0;
-  font-size: 1.2rem;
+  font-size: var(--font-size-p);
 }
 
 .footer-content a {
@@ -328,6 +326,7 @@ footer {
   font-family: var(--main-font);
   margin-bottom: 20px;
   padding-bottom: 2rem; /* Add padding to the bottom */
+  font-size: var(--font-size-h2);
 }
 
 #footer h2::after {
@@ -353,22 +352,29 @@ footer {
 }
 
 .contact-info h3,
+.follow-me h3,
 .location h3 {
   display: flex;
   align-items: center; /* Align items vertically */
   font-weight: bold; /* Make headings bold */
+  font-size: var(--font-size-h3);
+}
+
+#footer h4 {
+  font-size: var(--font-size-h4);
 }
 
 .social-icons {
   display: flex;
   justify-content: center;
-  gap: 2.5rem; /* Add space between the social icons */
+  gap: 3rem; /* Add space between the social icons */
 }
 
 .location h3 img {
-  margin-left: 10px; /* Add space between the text and the image */
+  margin-left: 5px; /* Add space between the text and the image */
 }
 
 .copywrite {
   margin-top: 20px; /* Add space above the copyright */
+  font-size: var(--font-size-p);
 }
