@@ -255,7 +255,7 @@ section {
 
 .project-item img:hover {
   transform: scale(1.15) rotate(2deg); /* Scale and rotate image on hover */
-  box-shadow: 0 0 10px rgba(236, 6, 6, 0.5); /* Add box shadow effect */
+  box-shadow: 0 0 10px rgba(6, 132, 236, 0.5); /* Add box shadow effect */
 }
 
 .project-item p {
@@ -263,20 +263,20 @@ section {
   margin: 0 0 0.625rem;
 }
 
-.project-item a {
+.project-item .project-link {
   font-size: var(--font-size-p);
   text-decoration: none;
   display: inline-block;
   padding: 1rem 1rem;
-  background-color: #5934be;
+  background-color: #0d86e9;
   color: #1c1c1c;
   border-radius: 1.562rem;
   transition: transform 0.3s ease;
 }
 
-.project-item a:hover {
+.project-link:hover {
   transform: scale(1.15);
-  background-color: #e9b14c;
+  background-color: #c13ee2de;
   color: white;
 }
 
@@ -368,6 +368,15 @@ footer {
   display: flex;
   justify-content: center;
   gap: 3rem; /* Add space between the social icons */
+}
+
+
+.contact-info img {
+  width: 50%; /* Adjust the percentage to decrease the size */
+  height: auto;
+  max-width: 15%;
+  max-height: 15%;
+  margin-right: 10px;
 }
 
 .location h3 img {
