@@ -1,10 +1,19 @@
+/* Variables */
+:root {
+  --main-font: 'Montserrat', sans-serif;
+  --secondary-font: 'Roboto', sans-serif;
+  --primary-color: #351d77;
+  --secondary-color: #ec91c4;
+  --tertiary-color: #eee4f0;
+  --footer-bg-color: #525252;
+
 /* Base Styles */
 html {
   font-size: 16px;
 }
 
 body {
-  font-family: "Roboto", sans-serif, "Montserrat", sans-serif;
+  font-family: var(--main-font), var(--secondary-font);
   margin: 0;
   padding: 0;
 }
@@ -13,12 +22,13 @@ h1,
 h2,
 h3,
 h4 {
-  font-family: "Montserrat", sans-serif;
+  font-family: var(--main-font);
 }
 
 p {
-  font-family: "Roboto", sans-serif;
+  font-family: var(--secondary-font);
   margin: 0.3125rem 0;
+  font-size: 1.2rem;
 }
 
 a {
@@ -33,7 +43,7 @@ a {
 
 /* Header */
 header {
-  background-color: #351d77;
+  background-color: var(--primary-color);
   color: #cac4d1;
   padding: 1.875rem 0;
 }
@@ -64,6 +74,7 @@ header {
 .header-title h1 {
   font-size: 3rem;
 }
+
 .header-title h2 {
   font-size: 2rem;
 }
@@ -83,7 +94,7 @@ nav ul li a {
   text-decoration: none;
   display: inline-block;
   padding: 0.625rem 1.25rem;
-  background-color: #ec91c4;
+  background-color: var(--secondary-color);
   color: #1c1c1c;
   border-radius: 1.5625rem;
   transition: transform 0.3s ease;
@@ -102,7 +113,7 @@ section {
 
 /* About Section */
 #about {
-  background-color: #eee4f0;
+  background-color: var(--tertiary-color);
 }
 
 #about h2 {
@@ -112,7 +123,7 @@ section {
 #about h2::after {
   content: "";
   display: block;
-  width: 80%;
+  width: 45%;
   height: 0.0625rem;
   background: linear-gradient(to right, #e3cae7, #351d77);
   margin: 0.625rem auto;
@@ -142,7 +153,7 @@ section {
 .skills-panel h2::after {
   content: "";
   display: block;
-  width: 80%;
+  width: 45%;
   height: 0.0625rem;
   margin: 0.625rem auto;
   animation: lineFadeIn 0.5s ease-in-out forwards;
@@ -153,7 +164,7 @@ section {
 }
 
 .skills-panel h2::after {
-  background: linear-gradient(to right, #806e9b, #1c1c1c);
+  background: linear-gradient(to right,  #e3cae7, #351d77);
 }
 
 .languages-list,
@@ -198,11 +209,10 @@ section {
 #projects h2::after {
   content: "";
   display: block;
-  width: 80%;
+  width: 45%;
   height: 0.0625rem;
   margin: 0.625rem auto;
-  animation: lineFadeIn 0.5s ease-in-out forwards;
-  background: linear-gradient(to right, #eee4f0, #1c1c1c);
+  background: linear-gradient(to right, #e2d3d3a9, #050505d3);
 }
 
 #projects h4 {
@@ -225,19 +235,7 @@ section {
   box-sizing: border-box;
   text-align: center;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Add box shadow */
-}
-
-.project-item {
   width: calc(50% - 20px);
-  padding: 1.25rem;
-  box-sizing: border-box;
-  text-align: center;
-}
-
-.project-item > .project-image-link.project-link {
-  border: none;
-  background-color: none;
-
 }
 
 #projects h3 {
@@ -305,52 +303,72 @@ section {
 
 /* Footer */
 footer {
-  background-color: #626066;
-  color: #cac4d1;
-  padding: 5rem;
+  text-align: center;
+  padding: 3rem 0; /* Add padding to the top and bottom of the footer */
+  background-color: var(--footer-bg-color);
 }
 
 .footer-content {
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
   align-items: center;
-  flex-flow: row wrap;
+}
+
+.footer-content p {
+  font-family: var(--secondary-font);
+  margin: 0.3125rem 0;
+  font-size: 1.2rem;
+}
+
+.footer-content a {
+  font-weight: bold;
+}
+
+.footer-title {
+  font-family: var(--main-font);
+  margin-bottom: 20px;
+  padding-bottom: 2rem; /* Add padding to the bottom */
+}
+
+#footer h2::after {
+  content: "";
+  display: block;
+  width: 45%;
+  height: 0.0625rem;
+  background: linear-gradient(to right, #e3cae7, #351d77);
+  margin: 0.625rem auto;
+}
+
+.footer-row {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
 }
 
 .contact-info,
 .follow-me,
 .location {
   flex: 1;
-  text-align: center;
-  margin-bottom: 30px;
+  max-width: 200px;
+}
+
+.contact-info h3,
+.location h3 {
+  display: flex;
+  align-items: center; /* Align items vertically */
+  font-weight: bold; /* Make headings bold */
 }
 
 .social-icons {
   display: flex;
   justify-content: center;
+  gap: 2.5rem; /* Add space between the social icons */
 }
 
-.social-icons a {
-  margin: 0 0.9375rem;
-}
-
-.social-icons img {
-  height: 2.5rem;
-  width: auto;
+.location h3 img {
+  margin-left: 10px; /* Add space between the text and the image */
 }
 
 .copywrite {
-  text-align: center;
-  padding: 3.75rem 0;
-}
-
-@keyframes lineFadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(-5px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  margin-top: 20px; /* Add space above the copyright */
 }
