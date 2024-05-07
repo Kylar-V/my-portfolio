@@ -2,10 +2,12 @@
 :root {
   --main-font: "Montserrat", sans-serif;
   --secondary-font: "Roboto", sans-serif;
-  --primary-color: #351d77;
-  --secondary-color: #ec91c4;
-  --tertiary-color: #eee4f0;
-  --footer-bg-color: #525252;
+  --header-bg-color: #042B44;    
+  --header-nav-color: #A1CCDC;  
+  --about-me-bg-color: #A1CCDC;   
+  --languages-skills-bg-color: #096B90 ;
+  --my-projects-bg-color: #71B7D5;
+  --footer-bg-color: #08171E;   
 
   /* Font sizes */
   --font-size-h1: 3rem;
@@ -46,7 +48,7 @@ ul li {
 
 /* Header */
 header {
-  background-color: var(--primary-color);
+  background-color: var(--header-bg-color);
   color: #cac4d1;
   padding: 1.875rem 0;
 }
@@ -97,7 +99,7 @@ nav ul li a {
   text-decoration: none;
   display: inline-block;
   padding: 0.625rem 1.25rem;
-  background-color: var(--secondary-color);
+  background-color: var(--header-nav-color);
   color: #1c1c1c;
   border-radius: 1.5625rem;
   transition: transform 0.3s ease;
@@ -105,7 +107,7 @@ nav ul li a {
 
 nav ul li a:hover {
   transform: scale(1.25);
-  background-color: #ec6eb6;
+  background-color: #2276d6;
 }
 
 /* Sections */
@@ -116,7 +118,7 @@ section {
 
 /* About Section */
 #about {
-  background-color: var(--tertiary-color);
+  background-color: var(--about-me-bg-color);
 }
 
 #about h2 {
@@ -141,7 +143,7 @@ section {
 
 /* Languages and Skills Section */
 #languages-skills {
-  background-color: #e3cae7;
+  background-color: var(--languages-skills-bg-color);
   padding: 5rem 0; /* Add padding to the top and bottom */
 }
 
@@ -201,7 +203,7 @@ section {
 
 /* Projects Section */
 #projects {
-  background-color: #8f75d8;
+  background-color: var(--my-projects-bg-color);
   color: #1c1c1c;
   padding: 5rem 0; /* Add padding to the top and bottom */
 }
@@ -229,14 +231,19 @@ section {
   justify-content: space-between; /* Ensure equal spacing between items */
   gap: 2.5rem;
   margin-top: 2rem; /* Add margin to the top */
+  align-items: stretch;
 }
 
 .project-item {
+  flex: 1 1 calc(50% - 2.5rem);
   padding: 1.25rem;
   box-sizing: border-box;
   text-align: center;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Add box shadow */
-  width: calc(50% - 20px);
+  /* width: calc(50% - 20px); */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .project-item h3 {
@@ -255,7 +262,7 @@ section {
 
 .project-item img:hover {
   transform: scale(1.15) rotate(2deg); /* Scale and rotate image on hover */
-  box-shadow: 0 0 10px rgba(6, 132, 236, 0.5); /* Add box shadow effect */
+  box-shadow: 0 0 10px rgba(19, 16, 201, 0.418); /* Add box shadow effect */
 }
 
 .project-item p {
@@ -268,15 +275,16 @@ section {
   text-decoration: none;
   display: inline-block;
   padding: 1rem 1rem;
-  background-color: #0d86e9;
+  background-color: #386fd4b6;
   color: #1c1c1c;
   border-radius: 1.562rem;
   transition: transform 0.3s ease;
+  align-self: center; 
 }
 
 .project-link:hover {
   transform: scale(1.15);
-  background-color: #c13ee2de;
+  background-color: #2843dade;
   color: white;
 }
 
@@ -304,6 +312,7 @@ footer {
   text-align: center;
   padding: 3rem 0; /* Add padding to the top and bottom of the footer */
   background-color: var(--footer-bg-color);
+  color: #A1CCDC;
 }
 
 .footer-content {
@@ -370,13 +379,15 @@ footer {
   gap: 3rem; /* Add space between the social icons */
 }
 
+.icon-text {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
 
-.contact-info img {
-  width: 50%; /* Adjust the percentage to decrease the size */
-  height: auto;
-  max-width: 15%;
-  max-height: 15%;
-  margin-right: 10px;
+.icon-text img {
+  width: 24px;
+  height: 24px;
 }
 
 .location h3 img {
