@@ -201,7 +201,6 @@ section {
   font-size: 1rem;
 }
 
-
 /* Projects Section */
 #projects {
   background-color: var(--my-projects-bg-color);
@@ -252,8 +251,9 @@ section {
 }
 
 .project-item img {
-  width: 100%;
-  height: auto;
+  width: 100%; /* Ensures the image takes the full width of its container */
+  height: 350px; /* Adjust this value based on your design needs */
+  object-fit: cover; /* Ensures the image covers the area, cropping it if necessary */
   max-width: 100%;
   margin-bottom: 1.25rem;
   transition: transform 0.3s ease;
@@ -315,6 +315,7 @@ footer {
 
 .footer-content {
   width: 80%;
+  max-width: 1200px;
   margin: 0 auto; /* Center the footer content */
 }
 
@@ -336,15 +337,19 @@ footer {
 
 .footer-row {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 
 .contact-info,
 .follow-me,
-.location {
-  flex: 1;
-  max-width: 200px;
+.location,
+.email-text,
+.call-text {
+  flex: 1 1 200px;
+  max-width: 300px;
   text-align: center; /* Center the content inside these sections */
+  margin-bottom: 20px;
 }
 
 .contact-info h3,
@@ -364,18 +369,22 @@ footer {
 .social-icons {
   display: flex;
   justify-content: center;
-  gap: 3rem;
+  flex-wrap: wrap;
+  gap: 25px;
 }
 
-.icon-text {
+.email-text,
+.call-text {
   display: flex;
   align-items: center;
-  gap: 10px;
+  
 }
 
-.icon-text img {
+.email-text img,
+.call-text img {
   width: 24px;
   height: 24px;
+  padding-right: 10px;
 }
 
 .location h3 img {
