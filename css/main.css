@@ -2,24 +2,24 @@
 :root {
   --main-font: "Montserrat", sans-serif;
   --secondary-font: "Roboto", sans-serif;
-  --header-bg-color: #042B44;    
-  --header-nav-color: #A1CCDC;  
-  --about-me-bg-color: #A1CCDC;   
-  --languages-skills-bg-color: #096B90 ;
-  --my-projects-bg-color: #71B7D5;
-  --footer-bg-color: #08171E;   
+  --header-bg-color: #042b44;
+  --header-nav-color: #a1ccdc;
+  --about-me-bg-color: #a1ccdc;
+  --languages-skills-bg-color: #096b90;
+  --my-projects-bg-color: #71b7d5;
+  --footer-bg-color: #08171e;
 
   /* Font sizes */
-  --font-size-h1: 3rem;
-  --font-size-h2: 2.5rem;
-  --font-size-h3: 2rem;
-  --font-size-h4: 1.4rem;
-  --font-size-p: 1.3rem;
+  --font-size-h1: 2.5rem;
+  --font-size-h2: 2rem;
+  --font-size-h3: 1.5rem;
+  --font-size-h4: 1.2rem;
+  --font-size-p: 1rem;
 }
 
 /* Base Styles */
 html {
-  font-size: 16px;
+  font-size: 100%;
 }
 
 body {
@@ -37,24 +37,24 @@ h4 {
 
 p {
   font-family: var(--secondary-font);
-  margin: 0.3125rem 0;
-  font-size: var(--font-size-p);
+  margin: 0.75rem 0;
+  font-size: 1rem;
 }
 
 ul li {
   font-family: var(--secondary-font);
-  font-size: var(--font-size-p);
+  font-size: 1rem;
 }
 
 /* Header */
 header {
   background-color: var(--header-bg-color);
   color: #cac4d1;
-  padding: 1.875rem 0;
+  padding: 1.5rem 5%; /* Adjusted padding */
 }
 
 .header-section {
-  padding: 1.875rem;
+  padding: 1.5rem 5%; /* Adjusted padding */
 }
 
 .header-section nav ul {
@@ -67,21 +67,21 @@ header {
 }
 
 .header-section nav ul li {
-  margin-right: 0.625rem;
+  margin-right: 2%;
 }
 
 .header-title {
   text-align: center;
-  margin-top: 1.25rem;
-  padding-top: 1.25rem;
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
 }
 
 .header-title h1 {
-  font-size: var(--font-size-h1);
+  font-size: 2.5rem;
 }
 
 .header-title h2 {
-  font-size: var(--font-size-h2);
+  font-size: 2rem;
 }
 
 /* Navigation */
@@ -92,13 +92,13 @@ nav ul {
 
 nav ul li {
   display: inline-block;
-  margin-right: 0.625rem;
+  margin-right: 2%;
 }
 
 nav ul li a {
   text-decoration: none;
   display: inline-block;
-  padding: 0.625rem 1.25rem;
+  padding: 0.75rem 1.5rem;
   background-color: var(--header-nav-color);
   color: #1c1c1c;
   border-radius: 1.5625rem;
@@ -106,13 +106,13 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  transform: scale(1.25);
+  transform: scale(1.1);
   background-color: #2276d6;
 }
 
 /* Sections */
 section {
-  padding: 2.5rem 0;
+  padding: 2rem 5%; /* Adjusted padding */
   text-align: center;
 }
 
@@ -144,12 +144,12 @@ section {
 /* Languages and Skills Section */
 #languages-skills {
   background-color: var(--languages-skills-bg-color);
-  padding: 5rem 0; /* Add padding to the top and bottom */
+  padding: 3rem 5%;
 }
 
 .languages-panel h2,
 .skills-panel h2 {
-  font-size: var(--font-size-h2);
+  font-size: 2rem;
   margin-bottom: 1rem;
   padding: 2rem;
 }
@@ -160,7 +160,7 @@ section {
   display: block;
   width: 45%;
   height: 0.0625rem;
-  margin: 0.625rem auto;
+  margin: 1rem auto;
   animation: lineFadeIn 0.5s ease-in-out forwards;
 }
 
@@ -174,11 +174,11 @@ section {
 
 .languages-list,
 .skills-list {
-  list-style: none; /* Remove bullet points */
+  list-style: none;
   display: flex;
-  justify-content: center; /* Center the items horizontally */
+  justify-content: center;
   flex-wrap: wrap;
-  gap: 2rem; /* Increase the gap between icons */
+  gap: 2rem;
 }
 
 .languages-list li,
@@ -198,22 +198,23 @@ section {
 .languages-list li p,
 .skills-list li p {
   margin: 0;
-  font-size: var(--font-size-p);
+  font-size: 1rem;
 }
+
 
 /* Projects Section */
 #projects {
   background-color: var(--my-projects-bg-color);
   color: #1c1c1c;
-  padding: 5rem 0; /* Add padding to the top and bottom */
+  padding: 3rem 5%;
 }
 
 #projects h2 {
-  font-size: var(--font-size-h2);
+  font-size: 2rem;
 }
 
 #projects h4 {
-  font-size: var(--font-size-h4);
+  font-size: 1.2rem;
 }
 
 #projects h2::after {
@@ -221,82 +222,80 @@ section {
   display: block;
   width: 45%;
   height: 0.0625rem;
-  margin: 0.625rem auto;
+  margin: 1rem auto;
   background: linear-gradient(to right, #e2d3d3a9, #050505d3);
 }
 
 .project-grid {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between; /* Ensure equal spacing between items */
-  gap: 2.5rem;
-  margin-top: 2rem; /* Add margin to the top */
+  justify-content: space-between;
+  gap: 2rem;
+  margin-top: 2rem;
   align-items: stretch;
 }
 
 .project-item {
-  flex: 1 1 calc(50% - 2.5rem);
-  padding: 1.25rem;
+  flex: 1 1 calc(50% - 2rem);
+  padding: 1rem;
   box-sizing: border-box;
   text-align: center;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Add box shadow */
-  /* width: calc(50% - 20px); */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
 .project-item h3 {
-  font-size: var(--font-size-h3);
-  margin-bottom: 1rem; /* Reduce margin bottom */
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .project-item img {
-  width: 75%; /* Reduce image size */
+  width: 100%;
   height: auto;
   max-width: 100%;
-  max-height: 300px;
   margin-bottom: 1.25rem;
-  transition: transform 0.3s ease; /* Add transition */
+  transition: transform 0.3s ease;
 }
 
 .project-item img:hover {
-  transform: scale(1.15) rotate(2deg); /* Scale and rotate image on hover */
-  box-shadow: 0 0 10px rgba(19, 16, 201, 0.418); /* Add box shadow effect */
+  transform: scale(1.05) rotate(2deg);
+  box-shadow: 0 0 10px rgba(19, 16, 201, 0.418);
 }
 
 .project-item p {
-  font-size: var(--font-size-p);
-  margin: 0 0 0.625rem;
+  font-size: 1rem;
+  margin: 0.5rem 0;
 }
 
 .project-item .project-link {
-  font-size: var(--font-size-p);
+  font-size: 1rem;
   text-decoration: none;
   display: inline-block;
-  padding: 1rem 1rem;
+  padding: 0.5rem 1rem;
   background-color: #386fd4b6;
   color: #1c1c1c;
   border-radius: 1.562rem;
   transition: transform 0.3s ease;
-  align-self: center; 
+  align-self: center;
 }
 
 .project-link:hover {
-  transform: scale(1.15);
+  transform: scale(1.05);
   background-color: #2843dade;
   color: white;
 }
 
 .project-item ul {
   list-style-type: none;
-  padding: 1.25rem 0 1.5rem;
+  padding: 0.75rem 0;
   margin: 0;
 }
 
 .project-item ul li {
-  margin: 0.625rem;
-  font-size: var(--font-size-p);
+  margin: 0.5rem;
+  font-size: 1rem;
 }
 
 .project-item ul li:before {
@@ -307,34 +306,22 @@ section {
   margin-left: -1em;
 }
 
-/* Footer */
 footer {
   text-align: center;
-  padding: 3rem 0; /* Add padding to the top and bottom of the footer */
+  padding: 3rem 0;
   background-color: var(--footer-bg-color);
-  color: #A1CCDC;
+  color: #a1ccdc;
 }
 
 .footer-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.footer-content p {
-  font-family: var(--secondary-font);
-  margin: 0.3125rem 0;
-  font-size: var(--font-size-p);
-}
-
-.footer-content a {
-  font-weight: bold;
+  width: 80%;
+  margin: 0 auto; /* Center the footer content */
 }
 
 .footer-title {
   font-family: var(--main-font);
   margin-bottom: 20px;
-  padding-bottom: 2rem; /* Add padding to the bottom */
+  padding-bottom: 2rem;
   font-size: var(--font-size-h2);
 }
 
@@ -350,7 +337,6 @@ footer {
 .footer-row {
   display: flex;
   justify-content: space-between;
-  width: 80%;
 }
 
 .contact-info,
@@ -358,14 +344,16 @@ footer {
 .location {
   flex: 1;
   max-width: 200px;
+  text-align: center; /* Center the content inside these sections */
 }
 
 .contact-info h3,
 .follow-me h3,
 .location h3 {
   display: flex;
-  align-items: center; /* Align items vertically */
-  font-weight: bold; /* Make headings bold */
+  align-items: center;
+  justify-content: center; /* Center the content horizontally */
+  font-weight: bold;
   font-size: var(--font-size-h3);
 }
 
@@ -376,7 +364,7 @@ footer {
 .social-icons {
   display: flex;
   justify-content: center;
-  gap: 3rem; /* Add space between the social icons */
+  gap: 3rem;
 }
 
 .icon-text {
@@ -391,10 +379,10 @@ footer {
 }
 
 .location h3 img {
-  margin-left: 5px; /* Add space between the text and the image */
+  margin-left: 5px;
 }
 
 .copywrite {
-  margin-top: 20px; /* Add space above the copyright */
+  margin-top: 20px;
   font-size: var(--font-size-p);
 }
