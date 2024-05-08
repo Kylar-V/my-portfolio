@@ -23,8 +23,9 @@ html {
 }
 
 body {
+  max-width: 100%;
   font-family: var(--main-font), var(--secondary-font);
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
 }
 
@@ -46,15 +47,21 @@ ul li {
   font-size: 1rem;
 }
 
+.container {
+  width: 100%; /* Adjusted width for container */
+  max-width: 100%; /* Max-width for container */
+  margin: 0 auto; /* Center the content horizontally */
+}
+
 /* Header */
 header {
   background-color: var(--header-bg-color);
   color: #cac4d1;
-  padding: 1.5rem 5%; /* Adjusted padding */
+  padding: 1.5rem 5%;
 }
 
 .header-section {
-  padding: 1.5rem 5%; /* Adjusted padding */
+  padding: 1.5rem 5%;
 }
 
 .header-section nav ul {
@@ -88,17 +95,20 @@ header {
 nav ul {
   list-style-type: none;
   padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
 }
 
 nav ul li {
   display: inline-block;
-  margin-right: 2%;
+  margin: 0 10px;
 }
 
 nav ul li a {
   text-decoration: none;
   display: inline-block;
-  padding: 0.75rem 1.5rem;
+  padding: 10px 20px;
   background-color: var(--header-nav-color);
   color: #1c1c1c;
   border-radius: 1.5625rem;
@@ -141,10 +151,15 @@ section {
   max-width: 50rem;
 }
 
-/* Languages and Skills Section */
 #languages-skills {
   background-color: var(--languages-skills-bg-color);
   padding: 3rem 5%;
+}
+
+.languages-panel,
+.skills-panel {
+  text-align: center;
+  margin-bottom: 2rem;
 }
 
 .languages-panel h2,
@@ -177,22 +192,21 @@ section {
   list-style: none;
   display: flex;
   justify-content: center;
+  gap: 20px;
   flex-wrap: wrap;
-  gap: 2rem;
 }
 
 .languages-list li,
 .skills-list li {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  text-align: center;
+  flex-basis: 8%;
 }
 
 .languages-list li img,
 .skills-list li img {
-  width: 3.125rem;
+  width: 60px;
   height: auto;
-  margin-bottom: 0.5rem;
+  margin-bottom: 10px;
 }
 
 .languages-list li p,
@@ -229,20 +243,15 @@ section {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 2rem;
-  margin-top: 2rem;
-  align-items: stretch;
+  gap: 20px;
 }
 
 .project-item {
-  flex: 1 1 calc(50% - 2rem);
+  flex: 1 1 calc(50% - 20px);
   padding: 1rem;
   box-sizing: border-box;
   text-align: center;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
 }
 
 .project-item h3 {
@@ -377,7 +386,6 @@ footer {
 .call-text {
   display: flex;
   align-items: center;
-  
 }
 
 .email-text img,
