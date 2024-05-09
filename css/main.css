@@ -1,4 +1,5 @@
 /* Variables */
+/* Variables */
 :root {
   --main-font: "Montserrat", sans-serif;
   --secondary-font: "Roboto", sans-serif;
@@ -57,11 +58,12 @@ ul li {
 header {
   background-color: var(--header-bg-color);
   color: #cac4d1;
-  padding: 1.5rem 5%;
+  padding: 10px;
 }
 
 .header-section {
-  padding: 1.5rem 5%;
+  text-align: center;
+  padding: 20px 0;
 }
 
 .header-section nav ul {
@@ -78,9 +80,8 @@ header {
 }
 
 .header-title {
-  text-align: center;
-  margin-top: 1.5rem;
-  padding-top: 1.5rem;
+  margin-top: 20px;
+  
 }
 
 .header-title h1 {
@@ -95,19 +96,19 @@ header {
 nav ul {
   list-style-type: none;
   padding: 0;
-  margin: 0;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
 }
 
 nav ul li {
-  display: inline-block;
-  margin: 0 10px;
+  margin: 0 20px;
 }
 
 nav ul li a {
   text-decoration: none;
   display: inline-block;
+  margin: 10px 20px;
   padding: 10px 20px;
   background-color: var(--header-nav-color);
   color: #1c1c1c;
@@ -158,8 +159,10 @@ section {
 
 .languages-panel,
 .skills-panel {
-  text-align: center;
-  margin-bottom: 2rem;
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+align-items: center;
 }
 
 .languages-panel h2,
@@ -198,6 +201,8 @@ section {
 
 .languages-list li,
 .skills-list li {
+  width: calc(50% - 20px);
+  margin: 10px;
   text-align: center;
   flex-basis: 8%;
 }
@@ -242,16 +247,18 @@ section {
 .project-grid {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
   gap: 20px;
 }
 
 .project-item {
+  width: 300px;
+  margin: 20px;
   flex: 1 1 calc(50% - 20px);
   padding: 1rem;
   box-sizing: border-box;
   text-align: center;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 2px 2px rgba(67, 14, 212, 0.1);
 }
 
 .project-item h3 {
@@ -261,7 +268,7 @@ section {
 
 .project-item img {
   width: 100%; /* Ensures the image takes the full width of its container */
-  height: 350px; /* Adjust this value based on your design needs */
+  height: auto; /* Adjust this value based on your design needs */
   object-fit: cover; /* Ensures the image covers the area, cropping it if necessary */
   max-width: 100%;
   margin-bottom: 1.25rem;
@@ -402,4 +409,52 @@ footer {
 .copywrite {
   margin-top: 20px;
   font-size: var(--font-size-p);
+}
+/* adjustments for tablet*/
+@media screen and (min-width: 768px) {
+ .header-section {
+  flex-direction: column;
+  align-items: center;
+ }
+
+ nav {
+  order: -1;
+  margin-bottom: 20px;
+ }
+
+ .header-title {
+  text-align: center;
+ }
+
+ .languages-panel, .skills-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ }
+ .languages-list li, .skills-list li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+ }
+
+ footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+ }
+
+ .footer-row {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 20px;
+ }
+
+ .location {
+  margin-top: 20px;
+ }
+}
+  /* adjustments for desktop*/
+@media screen and (min-width: 1200px) {
+  
 }
