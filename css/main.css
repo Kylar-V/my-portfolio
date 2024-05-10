@@ -81,7 +81,6 @@ header {
 
 .header-title {
   margin-top: 20px;
-  
 }
 
 .header-title h1 {
@@ -159,10 +158,10 @@ section {
 
 .languages-panel,
 .skills-panel {
-display: flex;
-flex-wrap: wrap;
-justify-content: center;
-align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
 .languages-panel h2,
@@ -412,49 +411,96 @@ footer {
 }
 /* adjustments for tablet*/
 @media screen and (min-width: 768px) {
- .header-section {
-  flex-direction: column;
-  align-items: center;
- }
+  .header-section {
+    flex-direction: column;
+    align-items: center;
+  }
 
- nav {
-  order: -1;
-  margin-bottom: 20px;
- }
+  nav {
+    order: -1;
+    margin-bottom: 20px;
+  }
 
- .header-title {
-  text-align: center;
- }
+  .header-title {
+    text-align: center;
+  }
 
- .languages-panel, .skills-panel {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
- }
- .languages-list li, .skills-list li {
-  display: flex;
-  align-items: center;
-  margin-bottom: 10px;
- }
+  .languages-panel,
+  .skills-panel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .languages-list li,
+  .skills-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
 
- footer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
- }
+  footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
 
- .footer-row {
-  display: flex;
-  justify-content: space-evenly;
-  margin-bottom: 20px;
- }
+  .footer-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly; /* Adjust alignment as needed */
+    gap: 20px; /* Adjust the gap between sections */
+  }
 
- .location {
-  margin-top: 20px;
- }
+  .contact-info,
+  .follow-me,
+  .location {
+    flex: 1 1 auto; /* Allow sections to grow and shrink */
+    max-width: 300px; /* Limit maximum width of each section */
+    text-align: center; /* Center the content inside each section */
+  }
 }
-  /* adjustments for desktop*/
+/* adjustments for desktop*/
 @media screen and (min-width: 1200px) {
-  
+  nav {
+    max-width: 100%;
+  }
+
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  nav ul li {
+    margin: 0 20px;
+  }
+
+  .project-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .project-item {
+    width: auto;
+  }
+
+  .project-item img {
+    width: 450px;
+    height: 280px;
+  }
+
+  footer {
+    text-align: center;
+    padding: 3rem 0;
+    background-color: var(--footer-bg-color);
+    color: #a1ccdc;
+  }
+
+  .footer-content {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto; /* Center the footer content */
+  }
 }
