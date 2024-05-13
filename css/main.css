@@ -151,18 +151,24 @@ section {
   margin: 0 auto;
   max-width: 50rem;
 }
+/* Languages and skills section */
 
 #languages-skills {
   background-color: var(--languages-skills-bg-color);
   padding: 3rem 5%;
 }
 
-.languages-panel,
-.skills-panel {
+.languages-panel {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+}
+
+.skills-panel {
+  text-align: center;
+  max-width: 100%;
+  margin: 0 auto;
 }
 
 .languages-panel h2,
@@ -179,19 +185,10 @@ section {
   width: 45%;
   height: 0.0625rem;
   margin: 1rem auto;
-  animation: lineFadeIn 0.5s ease-in-out forwards;
-}
-
-.languages-panel h2::after {
   background: linear-gradient(to right, #e3cae7, #351d77);
 }
 
-.skills-panel h2::after {
-  background: linear-gradient(to right, #e3cae7, #351d77);
-}
-
-.languages-list,
-.skills-list {
+.languages-list {
   list-style: none;
   display: flex;
   justify-content: center;
@@ -199,12 +196,24 @@ section {
   flex-wrap: wrap;
 }
 
-.languages-list li,
-.skills-list li {
+.skills-list {
+  padding: 0;
+  margin: 20px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+}
+
+.languages-list li {
   width: calc(50% - 20px);
   margin: 10px;
   text-align: center;
   flex-basis: 8%;
+}
+
+.skills-list li {
+  margin: 10px;
 }
 
 .languages-list li img,
@@ -269,8 +278,9 @@ section {
 .project-item img {
   width: 100%; /* Ensures the image takes the full width of its container */
   height: auto; /* Adjust this value based on your design needs */
-  object-fit: cover; /* Ensures the image covers the area, cropping it if necessary */
-  max-width: 100%;
+  max-width: 85%;
+  max-height: 325px;
+  object-fit: cover;
   margin-bottom: 1.25rem;
   transition: transform 0.3s ease;
 }
@@ -439,6 +449,12 @@ footer {
     margin-bottom: 10px;
   }
 
+  .project-item img {
+    width: auto;
+    max-width: 80%;
+    height: auto;
+  }
+
   footer {
     display: flex;
     flex-direction: column;
@@ -447,10 +463,7 @@ footer {
   }
 
   .footer-row {
-    display: flex;
-    flex-wrap: wrap;
     justify-content: space-evenly; /* Adjust alignment as needed */
-    gap: 20px; /* Adjust the gap between sections */
   }
 
   .contact-info,
@@ -463,9 +476,8 @@ footer {
 }
 /* adjustments for desktop*/
 @media screen and (min-width: 1200px) {
-
   .header-section {
-    max-width: 960px;
+    max-width: 1000px;
     margin: 0 auto;
   }
 
@@ -480,8 +492,9 @@ footer {
   }
 
   .project-item img {
-    width: 450px;
-    height: 280px;
+    width: auto;
+    max-width: 80%;
+    height: auto;
   }
 
   footer {
