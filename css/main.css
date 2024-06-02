@@ -262,23 +262,59 @@ section {
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
-  list-style-type: none;
   padding: 0;
   margin: 0;
 }
-
+/* Projects Section */
 .project-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Align all content in the center */
+  justify-content: center;
   width: 100%;
   max-width: 500px; /* Set a maximum width for project items */
   box-sizing: border-box;
   padding: 1rem;
-  text-align: center;
+  text-align: center; /* Ensures text is centered */
   box-shadow: 0px 2px 2px rgba(67, 14, 212, 0.1);
 }
 
-.project-item h3 {
-  font-size: var(--font-size-h3);
-  margin-bottom: 1rem;
+.project-item h4 {
+  font-size: var(--font-size-h4);
+  width: 100%; /* Ensures the title stretches to full width of the item */
+  text-align: center; /* Center align the title */
+}
+
+/* Adjust the skills-container and tools-container classes */
+/* Adjust the position of the skills and tools containers */
+.skills-container,
+.tools-container {
+  text-align: center;
+  margin-top: 20px; /* Add space between project item and skills/tools */
+}
+
+/* Style the h4 headings in the skills and tools containers */
+.skills-container h4,
+.tools-container h4 {
+  margin-bottom: 5px;
+}
+
+/* Style the ul in the skills and tools containers */
+.skills-container ul,
+.tools-container ul {
+  font-size: var(--project-section-font-size-ul);
+  font-weight: 500;
+  list-style: none;
+  padding: 0;
+  margin: 0 auto; /* Center the list horizontally */
+  max-width: 80%; /* Limit the width of the list */
+}
+
+/* Style the li in the skills and tools containers */
+.skills-container li,
+.tools-container li {
+  display: inline;
+  margin-right: 5px;
 }
 
 .project-item img {
@@ -306,6 +342,7 @@ section {
   text-decoration: none;
   display: inline-block;
   padding: 0.5rem 1rem;
+  margin: 20px 0;
   background-color: #386fd4b6;
   color: #1c1c1c;
   border-radius: 1.562rem;
