@@ -6,31 +6,37 @@
   --header-nav-text-color: #f0fff0;
   --header-title-h1-text-color: #f0ffff;
   --header-title-h2-text-color: #f8f8ff;
-
-  /* Nav Font sizes */
-  --font-size-h1: ;
-  --font-size-h2: ;
-  --font-size-h3: ;
-  --font-size-h4: ;
-  --font-size-p: ;
+  --about-text-color: #f0ffff;
 
   /* Font sizes for the home section */
   --home-section-font-size-h1: 3.5rem;
   --home-section-font-size-h2: 2.5rem;
   --home-section-font-size-h3: 2rem;
 
-  /* Font sizes for the project section */
-  --project-section-font-size-p: ;
-  --project-section-font-size-ul: ;
+  /* Font sizes for the about section */
+  --about-section-font-size-h2: 2.5rem;
+  --about-section-font-size-h3: 2rem;
+  --about-section-font-size-p: 1.8rem;
 }
 
 body {
-  font-size: 16px;
+  font-size: 18px;
   margin: 0;
   padding: 0;
 }
 
-/* Apply background image to the home section */
+.hidden {
+  display: none;
+}
+
+.section {
+  transition: opacity 0.5s ease-in-out;
+}
+
+.section.hidden {
+  opacity: 0;
+}
+
 #home {
   background-image: url("../img/index.html bg image.jpg");
   background-size: 100% 100%;
@@ -47,6 +53,9 @@ nav {
   left: 0;
   padding: 10px;
   z-index: 1000;
+  animation: fadeIn 4.5s ease;
+  animation-delay: 0.5s;
+  animation-direction: forwards;
 }
 
 nav ul {
@@ -74,11 +83,6 @@ nav ul li a {
 nav ul li a:hover {
   transform: scale(1.2);
   background-color: #9370db;
-}
-nav {
-  animation: fadeIn 4.5s ease;
-  animation-delay: 0.5s;
-  animation-direction: forwards;
 }
 
 @keyframes fadeIn {
@@ -117,6 +121,26 @@ nav {
   animation-direction: forwards;
 }
 
+#about {
+  background-image: url("../img/about-me bg image.jpeg");
+  background-size: 100% 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+}
+
+.about-text {
+  color: var(--about-text-color);
+  text-shadow: 2px 2px 4px rgba(153, 50, 204, 0.952);
+  background-color: rgba(255, 228, 225, 0.3);
+  padding: 10px 20px;
+  border-radius: 1.5625rem;
+  animation: fadeIn 4.5s ease;
+  animation-delay: 0.5s;
+  animation-direction: forwards;
+}
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -126,12 +150,14 @@ nav {
   }
 }
 
-#about {
-  background-image: url ("../img/about.html bg image.jpg");
-  background-size: 100% 100%;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+.about-text h2 {
+  font-size: var(--about-section-font-size-h2);
+}
+
+.about-text h3 {
+  font-size: var(--about-section-font-size-h3);
+}
+
+.about-text p {
+  font-size: var(--about-section-font-size-p);
 }
