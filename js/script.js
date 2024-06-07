@@ -1,128 +1,92 @@
 document.addEventListener("DOMContentLoaded", function () {
   const homeLink = document.getElementById("home-link");
   const aboutLink = document.getElementById("about-link");
+  const skillsLink = document.getElementById("skills-link");
+  const projectsLink = document.getElementById("projects-link");
+  const contactLink = document.getElementById("contact-link");
   const homeSection = document.getElementById("home");
   const aboutSection = document.getElementById("about");
-  const navBar = document.querySelector("nav");
-  const skillsLink = document.getElementById("skills-link");
   const skillsSection = document.getElementById("skills");
+  const projectsSection = document.getElementById("projects");
+  const contactSection = document.getElementById("contact");
+  const navBar = document.querySelector("nav");
 
-  // Function to remove event listeners for navigation links
-  function removeNavEventListeners() {
-    homeLink.removeEventListener("click", navigateHome);
-    aboutLink.removeEventListener("click", navigateAbout);
-    skillsLink.removeEventListener("click", navigateSkills);
+  // Function to hide all sections
+  function hideAllSections() {
+    const sections = [
+      homeSection,
+      aboutSection,
+      skillsSection,
+      projectsSection,
+      contactSection,
+    ];
+    sections.forEach((section) => {
+      if (section) {
+        section.style.opacity = "0";
+        section.style.transform = "scale(0.4)";
+        section.style.pointerEvents = "none";
+        section.style.visibility = "hidden";
+      }
+    });
   }
 
-  // Function to add event listeners for navigation links
-  function addNavEventListeners() {
-    homeLink.addEventListener("click", navigateHome);
-    aboutLink.addEventListener("click", navigateAbout);
-    skillsLink.addEventListener("click", navigateSkills);
-  }
-
-  // Function to navigate to the home section
-  function navigateHome(event) {
-    event.preventDefault();
-
-    removeNavEventListeners();
-
-    // Fade out and scale the about section
-    aboutSection.style.opacity = "0";
-    aboutSection.style.transform = "scale(0.4)";
-    aboutSection.style.pointerEvents = "none";
-
-    // Slide out the navbar before fading in the home section
-    navBar.style.top = "-100px";
-
-    // After the fade out and scale transition, hide the about section and show the home section
-    setTimeout(function () {
-      aboutSection.style.visibility = "hidden";
-      homeSection.style.visibility = "visible";
-      homeSection.classList.remove("hidden");
-      // Fade in and scale the home section
+  // Function to show a section
+  function showSection(section) {
+    console.log("Showing Section:", section);
+    if (section && section.style) {
+      section.style.visibility = "visible";
       setTimeout(function () {
-        homeSection.style.opacity = "1";
-        homeSection.style.transform = "scale(1)";
-        homeSection.style.pointerEvents = "all";
-
-        // Slide in the navbar from the top after a delay
-        setTimeout(function () {
-          navBar.style.top = "0";
-          addNavEventListeners(); // Add event listeners back
-        }, 500); // Adjust delay as needed
+        section.style.opacity = "1";
+        section.style.transform = "scale(1)";
+        section.style.pointerEvents = "all";
       }, 100);
-    }, 500); // Match this to the duration of the fade out and scale transition
+    } else {
+      console.error("Section is null, undefined, or missing style property!");
+    }
   }
 
-  // Function to navigate to the about section
-  function navigateAbout(event) {
-    event.preventDefault();
-
-    removeNavEventListeners();
-
-    // Fade out and scale the home section
-    homeSection.style.opacity = "0";
-    homeSection.style.transform = "scale(0.4)";
-    homeSection.style.pointerEvents = "none";
-
-    // Slide out the navbar before fading in the about section
-    navBar.style.top = "-100px";
-
-    // After the fade out and scale transition, hide the home section and show the about section
+  // Function to slide in the navbar
+  function slideInNavBar() {
     setTimeout(function () {
-      homeSection.style.visibility = "hidden";
-      aboutSection.style.visibility = "visible";
-      aboutSection.classList.remove("hidden");
-      // Fade in and scale the about section
-      setTimeout(function () {
-        aboutSection.style.opacity = "1";
-        aboutSection.style.transform = "scale(1)";
-        aboutSection.style.pointerEvents = "all";
-
-        // Slide in the navbar from the top after a delay
-        setTimeout(function () {
-          navBar.style.top = "0";
-          addNavEventListeners(); // Add event listeners back
-        }, 500); // Adjust delay as needed
-      }, 100);
-    }, 500); // Match this to the duration of the fade out and scale transition
+      navBar.style.top = "0";
+    }, 500);
   }
 
-  // Function to navigate to the skills section
-  function navigateSkills(event) {
-    event.preventDefault();
-
-    removeNavEventListeners();
-
-    // Fade out and scale the home section
-    homeSection.style.opacity = "0";
-    homeSection.style.transform = "scale(0.4)";
-    homeSection.style.pointerEvents = "none";
-
-    // Slide out the navbar before fading in the skills section
+  // Function to handle navigation
+  function handleNavigation(targetSection) {
+    hideAllSections();
     navBar.style.top = "-100px";
-
-    // After the fade out and scale transition, hide the home section and show the skills section
     setTimeout(function () {
-      homeSection.style.visibility = "hidden";
-      skillsSection.style.visibility = "visible";
-      skillsSection.classList.remove("hidden");
-      // Fade in and scale the skills section
-      setTimeout(function () {
-        skillsSection.style.opacity = "1";
-        skillsSection.style.transform = "scale(1)";
-        skillsSection.style.pointerEvents = "all";
-
-        // Slide in the navbar from the top after a delay
-        setTimeout(function () {
-          navBar.style.top = "0";
-          addNavEventListeners(); // Add event listeners back
-        }, 500); // Adjust delay as needed
-      }, 100);
-    }, 500); // Match this to the duration of the fade out and scale transition
+      showSection(targetSection);
+      slideInNavBar();
+    }, 500);
   }
 
-  // Initial event listeners setup
-  addNavEventListeners();
+  // Event listeners for navigation links
+  homeLink.addEventListener("click", function (event) {
+    event.preventDefault();
+    handleNavigation(homeSection);
+  });
+
+  aboutLink.addEventListener("click", function (event) {
+    event.preventDefault();
+    handleNavigation(aboutSection);
+  });
+
+  skillsLink.addEventListener("click", function (event) {
+    event.preventDefault();
+    handleNavigation(skillsSection);
+  });
+
+  projectsLink.addEventListener("click", function (event) {
+    event.preventDefault();
+    handleNavigation(projectsSection);
+  });
+
+  contactLink.addEventListener("click", function (event) {
+    event.preventDefault();
+    console.log("Contact Link Clicked");
+    console.log("Contact Section:", contactSection);
+    handleNavigation(contactSection);
+  });
 });

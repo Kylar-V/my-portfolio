@@ -161,60 +161,7 @@ html {
     max-width: 80%;
   }
   
-  /* Languages and Skills Section */
-  #languages-skills {
-    background-color: var(--languages-skills-bg-color);
-    padding: 3rem 5%;
-    text-align: center;
-  }
   
-  .languages-panel,
-  .skills-panel {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .languages-panel h2,
-  .skills-panel h2 {
-    font-size: var(--font-size-h2);
-    margin-bottom: 1rem;
-    padding: 1rem;
-  }
-  
-  .languages-list,
-  .skills-list {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-  }
-  
-  .languages-list li,
-  .skills-list li {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    width: calc(50% - 20px);
-    margin: 10px;
-    flex-basis: 8%;
-  }
-  
-  .languages-list li img,
-  .skills-list li img {
-    width: 60px;
-    height: auto;
-    margin-bottom: 10px;
-  }
-  
-  .languages-list li p,
-  .skills-list li p {
-    margin: 0;
-    font-size: var(--font-size-p);
-    font-weight: 500;
-  }
   
   /* Projects Section */
   #projects {
@@ -419,7 +366,7 @@ html {
     font-size: var(--font-size-p);
   }
   
-  /* Media Queries */
+/*   
   @media screen and (min-width: 768px) {
     .header-title h1 {
       font-size: 1.8rem;
@@ -436,24 +383,24 @@ html {
   
     .about-text p {
       font-size: 0.9rem;
-      max-width: 100%; /* Adjust text width for better readability */
+      max-width: 100%; 
     }
   
     .languages-list li,
     .skills-list li {
-      width: 100%; /* Adjust the width of items in languages and skills lists */
+      width: 100%; 
     }
   
     .project-grid {
-      justify-content: space-around; /* Adjust spacing between project items */
+      justify-content: space-around; 
     }
   
     .project-item {
-      flex: 1 1 calc(50% - 40px); /* Each project item takes 50% width minus the gap */
+      flex: 1 1 calc(50% - 40px); 
     }
   
     .project-item img {
-      max-height: 180px; /* Adjust height to maintain aspect ratio */
+      max-height: 180px; 
     }
   
     footer ul li {
@@ -461,7 +408,7 @@ html {
     }
   }
   
-  /* Media Queries */
+  
   @media screen and (min-width: 1200px) {
     .header-title h1 {
       font-size: 2rem;
@@ -478,30 +425,30 @@ html {
   
     .about-text p {
       font-size: 1rem;
-      max-width: 90%; /* Adjust text width for better readability */
+      max-width: 90%; 
     }
   
     .languages-list li,
     .skills-list li {
       width: calc(
         50% - 10px
-      ); /* Adjust the width of items in languages and skills lists */
+      ); 
     }
   
     .project-grid {
-      gap: 30px; /* Adjust gap between project items */
+      gap: 30px; 
     }
   
     .project-item {
-      flex: 1 1 calc(50% - 40px); /* Each project item takes 50% width minus the gap */
+      flex: 1 1 calc(50% - 40px); 
     }
   
     .project-item img {
-      max-height: 200px; /* Adjust height to maintain aspect ratio */
+      max-height: 200px; 
     }
   
     footer ul li {
       margin: 0 0.5rem;
     }
   }
-  
+   */
