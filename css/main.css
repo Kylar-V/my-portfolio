@@ -53,19 +53,32 @@ body {
   visibility: hidden;
 }
 
+/* Home Page Styles */
 #home {
-  background-image: url("../img/index.html bg image.jpg");
+  background-image: url("../img/homepage 2 background image.jpeg");
   background-size: cover;
+  background-position: center;
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center;
+  padding: 50px; /* Add padding as needed */
 }
+
+.header-title {
+  width: 80%; /* Adjust width to 80% */
+}
+
+.header-title h1,
+.header-title h3 {
+  text-align: left; /* Align headers to the left */
+  color: var(--header-title-h1-text-color);
+}
+
 
 nav {
   position: fixed;
-  top: 0;
-  left: 0;
+  top: 0; /* Position at the top of the viewport */
+  left: 0; /* Position at the left of the viewport */
   padding: 10px;
   z-index: 1000;
   transition: top 0.5s ease;
@@ -98,36 +111,12 @@ nav ul li a:hover {
   background-color: #9370db;
 }
 
-.header-title {
-  text-align: center;
-  margin-bottom: 30px;
-}
-
-.header-title h1 {
-  font-size: var(--home-section-font-size-h1);
-  color: var(--header-title-h1-text-color);
-  margin-bottom: 20px;
-}
-
-.header-title h3 {
-  font-size: var(--home-section-font-size-h3);
-  color: var(--header-title-h2-text-color);
-  margin-bottom: 20px;
-}
-.header-title h1,
-.header-title h3 {
-  text-shadow: 2px 2px 4px rgba(123, 104, 238, 0.952);
-  background-color: rgba(102, 51, 153, 0.5);
-  padding: 10px 20px;
-  border-radius: 1.5625rem;
-  animation: fadeIn 4.5s ease;
-  animation-delay: 0.5s;
-  animation-direction: forwards;
-}
 
 #about {
-  background-image: url("../img/background image.jpeg");
-  background-size: cover;
+  background-image: url("../img/About me section bg image.jpg");
+  background-size: contain; /* Adjust the zoom level by changing the value */
+  background-repeat: no-repeat; /* Ensure the image is not repeated */
+  background-position: center; /* Center the image */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -183,8 +172,10 @@ nav ul li a:hover {
 /* Skills Section */
 /* Skills Section */
 #skills {
-  background-image: url("../img/contact.html bg images.jpeg");
-  background-size: cover;
+  background-image: url("../img/Skills background image.jpg");
+  background-size: contain; /* Adjust the zoom level by changing the value */
+  background-repeat: no-repeat; /* Ensure the image is not repeated */
+  background-position: center; /* Center the image */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -192,8 +183,6 @@ nav ul li a:hover {
   opacity: 0;
   pointer-events: none;
   visibility: hidden;
-  min-height: 100vh; /* Ensure the section takes full viewport height */
-  padding: 3rem 5%;
 }
 
 .skills-panel {
@@ -252,17 +241,17 @@ nav ul li a:hover {
 }
 
 #projects {
-  background-image: url("../img/projects.html bg images.jpg");
+  background-image: url("../img/projects background image.jpg");
+  color: #fbfbfc;
   background-size: cover;
-  color: #f0ffff;
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center;
+  text-align: left;
   opacity: 0;
   pointer-events: none;
   visibility: hidden;
-  min-height: 100vh;
+  min-height: 100vh; /* Ensure the section takes full viewport height */
   padding: 3rem 5%;
 }
 
@@ -362,104 +351,55 @@ nav ul li a:hover {
   background-color: #2276d6;
 }
 
-/* Footer */
 #contact {
-  background-image: url("../img/contact page bg image.jpg");
-  background-size: cover;
-  color: #f0ffff;
+  background-image: url("../img/contact me background image.jpeg");
+  background-size: contain; /* Adjust the zoom level by changing the value */
+  background-repeat: no-repeat; /* Ensure the image is not repeated */
+  background-position: center; /* Center the image */
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center;
+  text-align: left;
   opacity: 0;
   pointer-events: none;
   visibility: hidden;
-  min-height: 100vh;
-  padding: 3rem 5%;
 }
 
-
-/* @media screen and (min-width: 768px) {
-  .header-title h1 {
-    font-size: 1.8rem;
-  }
-
-  .header-title h2 {
-    font-size: 1.2rem;
-  }
-
-  .profile-pic img {
-    width: 210px;
-    height: 250px;
-  }
-
-  .about-text p {
-    font-size: 0.9rem;
-    max-width: 100%; 
-  }
-
-  .languages-list li,
-  .skills-list li {
-    width: 100%; 
-  }
-
-  .project-grid {
-    justify-content: space-around; 
-  }
-
-  .project-item {
-    flex: 1 1 calc(50% - 40px); 
-  }
-
-  .project-item img {
-    max-height: 180px; 
-  }
-
-  footer ul li {
-    margin: 0 0.25rem;
-  }
+.footer-content {
+  max-width: 1200px; /* Maximum width of content */
+  margin: 0 auto; /* Center align content */
+  text-align: center; /* Center align text */
 }
 
+.footer-title {
+  font-size: 24px; /* Title font size */
+  margin-bottom: 30px; /* Bottom margin */
+}
 
-@media screen and (min-width: 1200px) {
-  .header-title h1 {
-    font-size: 2rem;
-  }
+.footer-row {
+  display: flex; /* Use flexbox for layout */
+  justify-content: space-around; /* Evenly space elements */
+  flex-wrap: wrap; /* Allow items to wrap to next line if needed */
+}
 
-  .header-title h2 {
-    font-size: 1.5rem;
-  }
+.contact-info,
+.follow-us,
+.location {
+  flex-basis: 300px; /* Set width of each section */
+  margin-bottom: 30px; /* Bottom margin */
+}
 
-  .profile-pic img {
-    width: 210px;
-    height: 250px;
-  }
+.contact-info h3,
+.follow-us h3,
+.location h3 {
+  font-size: 20px; /* Heading font size */
+  margin-bottom: 10px; /* Bottom margin */
+}
 
-  .about-text p {
-    font-size: 1rem;
-    max-width: 90%; 
-  }
+.copywrite {
+  margin-top: 50px; /* Top margin */
+}
 
-  .languages-list li,
-  .skills-list li {
-    width: calc(
-      50% - 10px
-    ); 
-  }
-
-  .project-grid {
-    gap: 30px; 
-  }
-
-  .project-item {
-    flex: 1 1 calc(50% - 40px); 
-  }
-
-  .project-item img {
-    max-height: 200px; 
-  }
-
-  footer ul li {
-    margin: 0 0.5rem;
-  }
-} */
+.copywrite p {
+  font-size: 14px; /* Copyright font size */
+}

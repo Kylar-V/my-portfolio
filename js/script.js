@@ -89,4 +89,7 @@ document.addEventListener("DOMContentLoaded", function () {
     console.log("Contact Section:", contactSection);
     handleNavigation(contactSection);
   });
+
+  // Initial call to show home section
+  handleNavigation(homeSection);
 });
