@@ -2,21 +2,21 @@
 :root {
   --main-font: "Montserrat", sans-serif;
   --secondary-font: "Roboto", sans-serif;
-  --header-nav-color: #ba55d3;
-  --header-nav-text-color: #f0fff0;
-  --header-title-h1-text-color: #f0ffff;
+  --header-nav-color: #455e89;
+  --header-nav-text-color: #fcfcfc;
+  --header-title-h1-text-color: #f8f8ff;
   --header-title-h2-text-color: #f8f8ff;
   --about-text-color: #fbfbfc;
 
   /* Font sizes for the home section */
-  --home-section-font-size-h1: 3.5rem;
-  --home-section-font-size-h2: 2.5rem;
+  --home-section-font-size-h1: 2rem;
+  --home-section-font-size-h2: 1.8rem;
   --home-section-font-size-h3: 2rem;
 
   /* Font sizes for the about section */
-  --about-section-font-size-h2: 2.7rem;
-  --about-section-font-size-h3: 2.4rem;
-  --about-section-font-size-p: 2.2rem;
+  --about-section-font-size-h2: 1.8rem;
+  --about-section-font-size-h3: 1.6rem;
+  --about-section-font-size-p: 1.4rem;
 
   /* Font sizes for the skills section*/
   --skills-section-font-size-h2: 2.4rem;
@@ -30,100 +30,107 @@
 
 html,
 body {
-  background-color: #120a14;
   height: 100%;
   margin: 0;
   padding: 0;
-  overflow: hidden;
   font-size: 18px;
 }
 
-.section {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
+/* Home Page Styles */
+html,
+body {
   height: 100%;
-  transition: opacity 0.5s ease-in-out;
-}
-
-.hidden {
-  opacity: 0;
-  pointer-events: none;
-  visibility: hidden;
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
 }
 
 /* Home Page Styles */
-#home {
-  background-image: url("../img/homepage 2 background image.jpeg");
-  background-size: cover;
-  background-position: center;
+#home-section {
+  background-color: #b7094c;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  padding: 50px; /* Add padding as needed */
+  padding: 5vw; /* Adjust padding using viewport width units */
+  position: relative; /* For positioning h1 at the top */
 }
 
-.header-title {
-  width: 80%; /* Adjust width to 80% */
-}
-
-.header-title h1,
-.header-title h3 {
-  text-align: left; /* Align headers to the left */
-  color: var(--header-title-h1-text-color);
-}
-
-
-nav {
-  position: fixed;
-  top: 0; /* Position at the top of the viewport */
-  left: 0; /* Position at the left of the viewport */
-  padding: 10px;
-  z-index: 1000;
-  transition: top 0.5s ease;
-}
-
+/* Navigation */
 nav ul {
   list-style-type: none;
+  padding: 0;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 12vw; /* Adjust the margin to move the nav down */
 }
 
 nav ul li {
-  margin: 5px 30px;
-}
-
-nav ul li:last-child {
-  margin-right: 0;
+  margin: 0 20px;
 }
 
 nav ul li a {
   text-decoration: none;
+  display: inline-block;
+  margin: 10px 5px;
   padding: 10px 20px;
   background-color: var(--header-nav-color);
-  color: var(--header-nav-text-color);
+  color: #e9dede;
   border-radius: 1.5625rem;
   transition: transform 0.3s ease;
 }
 
 nav ul li a:hover {
-  transform: scale(1.2);
-  background-color: #9370db;
+  transform: scale(1.1);
+  background-color: #1780a1;
 }
 
+/* Header Title Styling */
+.header-content h1 {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: var(--home-section-font-size-h1);
+  color: var(--header-title-h1-text-color);
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(231, 229, 240, 0.952);
+}
 
-#about {
-  background-image: url("../img/About me section bg image.jpg");
-  background-size: contain; /* Adjust the zoom level by changing the value */
-  background-repeat: no-repeat; /* Ensure the image is not repeated */
-  background-position: center; /* Center the image */
+/* Profile Picture */
+.profile-pic img {
+  width: 210px; /* Adjust the size of the profile picture */
+  height: 220px;
+  border-radius: 25%;
+  object-fit: cover;
+  margin: 0 auto;
+  display: block;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(104, 79, 218, 0.952);
+}
+
+/* Subtitle Styling */
+h2 {
+  font-size: var(--home-section-font-size-h2);
+  text-align: center;
+  margin-top: 20px;
+  color: var(--header-title-h2-text-color);
+  text-shadow: 2px 2px 4px rgba(114, 92, 212, 0.952);
+}
+
+/* Section styles */
+.section {
+  padding: 50px 20px;
+}
+
+/* About section */
+
+#about-section {
+  background-color: #a01a58;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: left;
-  opacity: 0;
-  pointer-events: none;
-  visibility: hidden;
 }
 
 .about-content {
@@ -137,12 +144,8 @@ nav ul li a:hover {
 .about-text {
   color: var(--about-text-color);
   text-shadow: 2px 2px 4px rgba(144, 37, 202, 0.952);
-  background-color: rgba(230, 146, 146, 0.3);
-  padding: 10px 20px;
+  padding: 2vw;
   border-radius: 1.5625rem;
-  animation: fadeIn 4.5s ease;
-  animation-delay: 0.5s;
-  animation-direction: forwards;
 }
 
 .about-text h2 {
@@ -158,48 +161,30 @@ nav ul li a:hover {
   font-weight: 600;
 }
 
-.section {
-  opacity: 1;
-  transform: scale(1);
-  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
-}
-
-.section.hidden {
-  opacity: 0;
-  transform: scale(0.9); /* Adjust the scale value as needed */
-}
 /* Skills Section */
-/* Skills Section */
-/* Skills Section */
-#skills {
-  background-image: url("../img/Skills background image.jpg");
-  background-size: contain; /* Adjust the zoom level by changing the value */
-  background-repeat: no-repeat; /* Ensure the image is not repeated */
-  background-position: center; /* Center the image */
+#skills-section {
+  background-color: #892b64;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: left;
-  opacity: 0;
-  pointer-events: none;
-  visibility: hidden;
 }
 
 .skills-panel {
   text-shadow: 2px 2px 4px rgba(154, 62, 207, 0.952);
-  padding: 2rem 3rem;
+  padding: 2vw 3vw; /* Adjust padding using viewport width units */
   border-radius: 1.5625rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: fit-content; /* Make the background color fit the content */
+  width: 90%; /* Adjust width to fit content */
   margin: auto; /* Center the panel horizontally */
 }
 
 .skills-panel h2 {
-  font-size: var(--skills-section-font-size-h2);
-  margin-bottom: 1rem;
-  padding: 1rem;
+  font-size: 2.4vw; /* Adjust font size using viewport width units */
+  margin-bottom: 1vw; /* Adjust margin using viewport width units */
+  padding: 1vw; /* Adjust padding using viewport width units */
   text-align: center; /* Center the text */
 }
 
@@ -213,15 +198,15 @@ nav ul li a:hover {
 }
 
 .skill-item {
-  margin: 10px;
+  margin: 1vw; /* Adjust margin using viewport width units */
   display: flex;
   align-items: center;
-  width: calc(16.666% - 20px); /* Adjust width to fit six items in a row */
+  width: calc(16.666% - 2vw); /* Adjust width using viewport width units */
 }
 
 .item-container {
   background-color: rgba(161, 188, 211, 0.5); /* Individual background color */
-  padding: 10px 20px;
+  padding: 1vw 2vw; /* Adjust padding using viewport width units */
   border-radius: 1.5625rem;
   display: flex;
   flex-direction: row;
@@ -229,120 +214,91 @@ nav ul li a:hover {
 }
 
 .item-container img {
-  width: 45px; /* Set a fixed width */
-  height: 50px; /* Set a fixed height */
-  margin-bottom: 10px;
+  width: 4vw; /* Set width using viewport width units */
+  height: auto;
+  margin-bottom: 1vw; /* Adjust margin using viewport width units */
 }
 
 .item-container p {
   margin: 0;
-  font-size: var(--skills-section-font-size-p);
+  font-size: 1.5vw; /* Adjust font size using viewport width units */
   font-weight: 500;
 }
 
-#projects {
-  background-image: url("../img/projects background image.jpg");
+/* Projects section */
+#projects-section {
+  background-color: #723c70;
   color: #fbfbfc;
   background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: left;
-  opacity: 0;
-  pointer-events: none;
-  visibility: hidden;
   min-height: 100vh; /* Ensure the section takes full viewport height */
-  padding: 3rem 5%;
+  padding: 3vw 5vw; /* Adjust padding using viewport width units */
 }
 
 #projects h2 {
-  font-size: var(--projects-section-font-size-h2);
-  margin-bottom: 1rem;
+  font-size: 2.5vw; /* Adjust font size using viewport width units */
+  margin-bottom: 1vw; /* Adjust margin using viewport width units */
 }
 
 .project-grid {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
+  gap: 2vw; /* Adjust gap using viewport width units */
   padding: 0;
   margin: 0;
 }
 
 .project-item {
-  flex: 0 0 calc(50% - 20px);
-  max-width: 300px;
+  flex: 0 0 calc(50% - 2vw);
+  max-width: 30vw; /* Adjust max-width using viewport width units */
   box-sizing: border-box;
-  padding: 1rem;
+  padding: 1vw;
   text-align: left;
 }
 
 .project-item h4 {
-  font-size: var(--projects-section-font-size-h4);
+  font-size: 2.2vw; /* Adjust font size using viewport width units */
   width: 100%;
   text-align: center;
 }
 
 #projects h4 {
-  font-size: var(--projects-section-font-size-h4);
-}
-
-.skills-container,
-.tools-container {
-  text-align: center;
-  margin-top: 20px;
-}
-
-.skills-container h4,
-.tools-container h4 {
-  margin-bottom: 5px;
-}
-
-.skills-container ul,
-.tools-container ul {
-  font-size: var(--project-section-font-size-ul);
-  font-weight: 500;
-  list-style: none;
-  padding: 0;
-  margin: 0 auto;
-  max-width: 80%;
-}
-
-.skills-container li,
-.tools-container li {
-  display: inline;
-  margin-right: 5px;
+  font-size: 2.2vw; /* Adjust font size using viewport width units */
 }
 
 .project-item img {
   width: 100%;
   height: auto;
-  max-height: 200px;
+  max-height: 20vw; /* Adjust max-height using viewport width units */
   object-fit: cover;
   transition: transform 0.3s ease;
 }
 
 .project-item img:hover {
   transform: scale(1.05) rotate(2deg);
-  box-shadow: 0 0 10px rgba(19, 16, 201, 0.418);
+  box-shadow: 0 0 1vw rgba(19, 16, 201, 0.418); /* Adjust box-shadow using viewport width units */
 }
 
 .project-item p {
-  font-size: var(--project-section-font-size-p);
-  margin: 0.5rem 0;
+  font-size: 1.8vw; /* Adjust font size using viewport width units */
+  margin: 0.5vw 0; /* Adjust margin using viewport width units */
   font-weight: 500;
 }
 
 .project-item .project-link {
   font-weight: 500;
-  font-size: var(--project-section-font-size-p);
+  font-size: 1.8vw; /* Adjust font size using viewport width units */
   text-decoration: none;
   display: inline-block;
-  padding: 0.5rem 1rem;
-  margin: 20px 0;
+  padding: 0.5vw 1vw; /* Adjust padding using viewport width units */
+  margin: 2vw 0; /* Adjust margin using viewport width units */
   background-color: #386fd4b6;
   color: #f3ebeb;
-  border-radius: 1.562rem;
+  border-radius: 1.562vw; /* Adjust border-radius using viewport width units */
   transition: transform 0.3s ease;
 }
 
@@ -351,8 +307,9 @@ nav ul li a:hover {
   background-color: #2276d6;
 }
 
-#contact {
-  background-image: url("../img/contact me background image.jpeg");
+/* Contact Page */
+#contact-section {
+  background-color: #5c4d7d;
   background-size: contain; /* Adjust the zoom level by changing the value */
   background-repeat: no-repeat; /* Ensure the image is not repeated */
   background-position: center; /* Center the image */
@@ -360,20 +317,17 @@ nav ul li a:hover {
   justify-content: center;
   align-items: center;
   text-align: left;
-  opacity: 0;
-  pointer-events: none;
-  visibility: hidden;
 }
 
 .footer-content {
-  max-width: 1200px; /* Maximum width of content */
+  max-width: 90vw; /* Maximum width of content */
   margin: 0 auto; /* Center align content */
   text-align: center; /* Center align text */
 }
 
 .footer-title {
-  font-size: 24px; /* Title font size */
-  margin-bottom: 30px; /* Bottom margin */
+  font-size: 2.4vw; /* Title font size using viewport width units */
+  margin-bottom: 3vw; /* Bottom margin using viewport width units */
 }
 
 .footer-row {
@@ -385,21 +339,21 @@ nav ul li a:hover {
 .contact-info,
 .follow-us,
 .location {
-  flex-basis: 300px; /* Set width of each section */
-  margin-bottom: 30px; /* Bottom margin */
+  flex-basis: 30vw; /* Set width of each section using viewport width units */
+  margin-bottom: 3vw; /* Bottom margin using viewport width units */
 }
 
 .contact-info h3,
 .follow-us h3,
 .location h3 {
-  font-size: 20px; /* Heading font size */
-  margin-bottom: 10px; /* Bottom margin */
+  font-size: 2vw; /* Heading font size using viewport width units */
+  margin-bottom: 1vw; /* Bottom margin using viewport width units */
 }
 
 .copywrite {
-  margin-top: 50px; /* Top margin */
+  margin-top: 5vw; /* Top margin using viewport width units */
 }
 
 .copywrite p {
-  font-size: 14px; /* Copyright font size */
+  font-size: 1.4vw; /* Copyright font size using viewport width units */
 }
