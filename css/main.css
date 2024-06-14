@@ -2,10 +2,10 @@
 :root {
   --main-font: "Montserrat", sans-serif;
   --secondary-font: "Roboto", sans-serif;
-  --header-nav-color: #0c0c0c9d;
+  --header-nav-color: #0c0c0cc4;
   --header-nav-text-color: #e0ffff;
-  --header-title-h1-text-color: #fdfbfb;
-  --header-title-h2-text-color: #f8f8ff;
+  --header-title-h1-text-color: #faf5f5;
+  --header-title-h2-text-color: #fcfcfc;
   --about-text-color: #fbfbfc;
 
   /* Font sizes for the home section */
@@ -13,18 +13,24 @@
   --home-section-font-size-h2: 2rem;
 
   /* Font sizes for the about section */
-  --about-section-font-size-h2: 1.8rem;
-  --about-section-font-size-h3: 1.6rem;
-  --about-section-font-size-p: 1.4rem;
+  --about-section-font-size-h2: 1.6rem;
+  --about-section-font-size-h3: 1.4rem;
+  --about-section-font-size-p: 1.1rem;
 
   /* Font sizes for the skills section*/
-  --skills-section-font-size-h2: 2.4rem;
-  --skills-section-font-size-p: 1.5rem;
+  --skills-section-font-size-h2: 2.8rem;
+  --skills-section-font-size-p: 1.8rem;
 
   /*Font size for the projects section*/
   --projects-section-font-size-h2: 2.5rem;
-  --projects-section-font-size-h4: 2.2;
-  --projects-section-font-size-p: 1.8;
+  --projects-section-font-size-h4: 2rem;
+  --projects-section-font-size-p: 1.4rem;
+  --projects-section-font-size-ul: 1.5rem;
+
+  /*Footer font size */
+  --footer-section-font-size-h2: 2.5rem;
+  --footer-section-font-size-h3: 2.3rem;
+  --footer-section-font-size-p: 1.5rem;
 }
 
 html,
@@ -33,7 +39,8 @@ body {
   margin: 0;
   padding: 0;
   font-size: 18px;
-  background: url("../img/background image 3.jpeg") center center / cover no-repeat fixed;
+  background: url("../img/website-designing.webp") center center / cover
+    no-repeat fixed;
 }
 
 /* Home Page Styles */
@@ -48,16 +55,16 @@ body {
 
 /* Navigation */
 nav ul {
-  list-style-type: none;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  gap: 20px; /* Add space between items */
-  margin-top: 10px; /* Adjust the margin to separate from h1 */
+  list-style: none;
+  font-size: 20px;
+  width: 100%;
+  padding-left: 0;
+  text-transform: lowercase;
+  font-variant: small-caps;
 }
 
 nav ul li {
-  margin: 0;
+  margin: 8px;
 }
 
 nav ul li a {
@@ -86,21 +93,23 @@ nav ul li a:hover {
   font-size: 2.5rem; /* Set a fixed font size for h1 */
   color: var(--header-title-h1-text-color);
   text-align: center;
-  text-shadow: 2px 2px 4px rgba(143, 4, 4, 0.952);
+  text-shadow: 2px 2px 4px rgba(5, 5, 5, 0.952);
   margin-top: 20px; /* Adjust top margin to separate from nav */
 }
 
 .profile-pic {
-  width: 200px; /* Adjust width as needed */
-  height: 200px; /* Adjust height as needed */
-  border-radius: 50%; /* Make the image round */
-  overflow: hidden; /* Hide overflow to keep round shape */
-  margin-bottom: 20px; /* Adjust margin as needed */
+  width: 300px;
+  max-width: 100%;
+  height: 450px;
+  border-radius: 10px;
+  display: flex;
+  margin: 0 auto;
+  place-items: center;
 }
 
 .profile-pic img {
-  width: 100%; /* Ensure the image fills its container */
-  height: 100%; /* Ensure the image fills its container */
+  width: 100%;
+  height: 100%;
   object-fit: cover;
 }
 
@@ -109,7 +118,7 @@ h2 {
   text-align: center;
   margin-top: 20px;
   color: var(--header-title-h2-text-color);
-  text-shadow: 2px 2px 4px rgba(178, 34, 34, 0.952);
+  text-shadow: 2px 2px 4px rgba(7, 7, 7, 0.952);
 }
 
 /* Section styles */
@@ -117,11 +126,10 @@ h2 {
   padding: 50px 20px;
 }
 
-
 /* About section */
 
 #about-section {
-  background-color: #5390d9;
+  background-color: #6c0102;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -158,142 +166,179 @@ h2 {
 
 /* Skills Section */
 #skills-section {
-  background-color: #4ea8de;
+  background-color: #440101;
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: left;
+  padding: 5vw 0; /* Add padding for spacing */
+  text-align: center;
 }
 
 .skills-panel {
-  text-shadow: 2px 2px 4px rgba(154, 62, 207, 0.952);
+  text-shadow: 2px 2px 4px rgba(243, 239, 245, 0.952);
   padding: 2vw 3vw; /* Adjust padding using viewport width units */
   border-radius: 1.5625rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 90%; /* Adjust width to fit content */
+  max-width: 1000px; /* Set a max-width for larger screens */
   margin: auto; /* Center the panel horizontally */
 }
 
 .skills-panel h2 {
-  font-size: 2.4vw; /* Adjust font size using viewport width units */
+  font-size: var(--skills-section-font-size-h2);
   margin-bottom: 1vw; /* Adjust margin using viewport width units */
   padding: 1vw; /* Adjust padding using viewport width units */
-  text-align: center; /* Center the text */
 }
 
 .skills-list {
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap; /* Allow items to wrap to the next row */
-  justify-content: space-around; /* Evenly distribute items along the main axis */
-  align-items: center; /* Center items along the cross axis */
-  width: 80%; /* Ensure the container spans the full width */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5vw; /* Adjust gap between items */
+  width: 100%;
 }
 
 .skill-item {
   margin: 1vw; /* Adjust margin using viewport width units */
   display: flex;
+  flex-direction: column;
   align-items: center;
-  width: calc(16.666% - 2vw); /* Adjust width using viewport width units */
+  box-sizing: border-box;
+  text-align: center;
+  transition: transform 0.3s ease; /* Smooth scaling effect */
+}
+
+.skill-item:hover {
+  transform: scale(1.05);
 }
 
 .item-container {
-  background-color: rgba(161, 188, 211, 0.5); /* Individual background color */
   padding: 1vw 2vw; /* Adjust padding using viewport width units */
   border-radius: 1.5625rem;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
+  background-color: #f5f4f8a4; /* Ensure good contrast */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
 }
 
 .item-container img {
-  width: 4vw; /* Set width using viewport width units */
+  width: 60px; /* Set a minimum width for the images */
+  max-width: 80px; /* Set a maximum width for the images */
   height: auto;
   margin-bottom: 1vw; /* Adjust margin using viewport width units */
 }
 
 .item-container p {
   margin: 0;
-  font-size: 1.5vw; /* Adjust font size using viewport width units */
+  font-size: var(--skills-section-font-size-p);
   font-weight: 500;
+  color: #0a0a0a; /* Ensure text is readable */
 }
 
-/* Projects section */
+/* Projects Section */
 #projects-section {
-  background-color: #48bfe3;
-  color: #fbfbfc;
-  background-size: cover;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: left;
-  min-height: 100vh; /* Ensure the section takes full viewport height */
-  padding: 3vw 5vw; /* Adjust padding using viewport width units */
-}
-
-#projects h2 {
-  font-size: 2.5vw; /* Adjust font size using viewport width units */
-  margin-bottom: 1vw; /* Adjust margin using viewport width units */
+  padding: 2rem 0;
+  background-color: #222b31;
+  text-align: center;
 }
 
 .project-grid {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 2vw; /* Adjust gap using viewport width units */
-  padding: 0;
-  margin: 0;
+  gap: 2rem;
+  padding: 0 1rem;
 }
 
 .project-item {
-  flex: 0 0 calc(50% - 2vw);
-  max-width: 30vw; /* Adjust max-width using viewport width units */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 400px; /* Set a maximum width for project items */
   box-sizing: border-box;
-  padding: 1vw;
-  text-align: left;
+  padding: 1rem;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0px 2px 2px rgba(67, 14, 212, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.project-item:hover {
+  transform: scale(1.05);
 }
 
 .project-item h4 {
-  font-size: 2.2vw; /* Adjust font size using viewport width units */
+  font-size: var(--projects-section-font-size-h4);
   width: 100%;
   text-align: center;
+  margin-bottom: 1rem;
 }
 
-#projects h4 {
-  font-size: 2.2vw; /* Adjust font size using viewport width units */
+.skills-container,
+.tools-container {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.skills-container h4,
+.tools-container h4 {
+  margin-bottom: 0.5rem;
+}
+
+.skills-container ul,
+.tools-container ul {
+  font-size: var(--projects-section-font-size-ul);
+  font-weight: 500;
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.skills-container li,
+.tools-container li {
+  display: inline-block;
+  margin-right: 5px;
 }
 
 .project-item img {
   width: 100%;
   height: auto;
-  max-height: 20vw; /* Adjust max-height using viewport width units */
+  max-height: 200px;
   object-fit: cover;
+  border-radius: 8px;
   transition: transform 0.3s ease;
 }
 
 .project-item img:hover {
   transform: scale(1.05) rotate(2deg);
-  box-shadow: 0 0 1vw rgba(19, 16, 201, 0.418); /* Adjust box-shadow using viewport width units */
+  box-shadow: 0 0 10px rgba(19, 16, 201, 0.418);
 }
 
 .project-item p {
-  font-size: 1.8vw; /* Adjust font size using viewport width units */
-  margin: 0.5vw 0; /* Adjust margin using viewport width units */
+  font-size: var(--projects-section-font-size-p);
+  margin: 0.5rem 0;
   font-weight: 500;
+  text-align: center;
 }
 
 .project-item .project-link {
+  font-size: var(--projects-section-font-size-p);
   font-weight: 500;
-  font-size: 1.8vw; /* Adjust font size using viewport width units */
   text-decoration: none;
   display: inline-block;
-  padding: 0.5vw 1vw; /* Adjust padding using viewport width units */
-  margin: 2vw 0; /* Adjust margin using viewport width units */
+  padding: 0.5rem 1rem;
+  margin: 1rem 0;
   background-color: #386fd4b6;
-  color: #f3ebeb;
-  border-radius: 1.562vw; /* Adjust border-radius using viewport width units */
+  color: #1c1c1c;
+  border-radius: 1.562rem;
   transition: transform 0.3s ease;
 }
 
@@ -304,51 +349,59 @@ h2 {
 
 /* Contact Page */
 #contact-section {
-  background-color: #56cfe1;
-  background-size: contain; /* Adjust the zoom level by changing the value */
-  background-repeat: no-repeat; /* Ensure the image is not repeated */
-  background-position: center; /* Center the image */
+  background-color: #55666e;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: left;
+  text-align: center;
+  padding: 5vw 0;
 }
 
 .footer-content {
-  max-width: 90vw; /* Maximum width of content */
-  margin: 0 auto; /* Center align content */
-  text-align: center; /* Center align text */
+  max-width: 90%;
+  margin: 0 auto;
 }
 
 .footer-title {
-  font-size: 2.4vw; /* Title font size using viewport width units */
-  margin-bottom: 3vw; /* Bottom margin using viewport width units */
+  font-size: var(--footer-section-font-size-h2); /* Using CSS variable for h2 font size */
+  margin-bottom: calc(3vw + 10px); /* Adjusted bottom margin with a minimum of 20px */
 }
 
 .footer-row {
-  display: flex; /* Use flexbox for layout */
-  justify-content: space-around; /* Evenly space elements */
-  flex-wrap: wrap; /* Allow items to wrap to next line if needed */
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 2vw;
 }
 
 .contact-info,
 .follow-us,
 .location {
-  flex-basis: 30vw; /* Set width of each section using viewport width units */
-  margin-bottom: 3vw; /* Bottom margin using viewport width units */
+  flex-basis: calc(30% - 2vw);
+  margin-bottom: 3vw;
 }
 
 .contact-info h3,
 .follow-us h3,
 .location h3 {
-  font-size: 2vw; /* Heading font size using viewport width units */
-  margin-bottom: 1vw; /* Bottom margin using viewport width units */
+  font-size: var(--footer-section-font-size-h3); /* Using CSS variable for h3 font size */
+  margin-bottom: 1vw; /* Adjusted bottom margin */
+}
+
+.contact-info p,
+.follow-us p,
+.location p {
+  font-size: var(--footer-section-font-size-p); /* Using CSS variable for p font size */
+  margin-bottom: 1vw; /* Adjusted bottom margin */
 }
 
 .copywrite {
-  margin-top: 5vw; /* Top margin using viewport width units */
+  margin-top: 5vw;
 }
 
 .copywrite p {
-  font-size: 1.4vw; /* Copyright font size using viewport width units */
+  font-size: var(--footer-section-font-size-p); /* Using CSS variable for p font size */
 }
