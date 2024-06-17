@@ -368,7 +368,7 @@ h2 {
   background-color: #55666e;
   color: #f8f5f5;
   text-align: center;
-  padding: 100px 0; /* Ensure adequate vertical padding */
+  padding: 100px 0 0;
 }
 
 .footer-content {
@@ -430,7 +430,12 @@ h2 {
 }
 
 .copywrite {
-  margin-top: 5vw;
+  position: relative; /* Use relative positioning */
+  margin-top: auto; /* Push to the bottom */
+  padding: 20px 0; /* Add padding for spacing */
+  text-align: center; /* Center align text */
+  color: #f5efef; /* Text color */
+  font-size: 18px; /* Adjust font size */
 }
 
 .copywrite p {
