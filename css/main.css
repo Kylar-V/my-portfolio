@@ -1,9 +1,6 @@
-/* Variables */
 :root {
   --main-font: "Montserrat", sans-serif;
   --secondary-font: "Roboto", sans-serif;
-
-  /* Font sizes for the home section */
   --header-nav-color: #141214d0;
   --header-nav-text-color: #f0fff0;
   --header-title-h1-text-color: #fafafa;
@@ -11,24 +8,16 @@
   --home-section-font-size-h1: 3.5rem;
   --home-section-font-size-h2: 2.5rem;
   --home-section-font-size-h3: 2rem;
-
-  /* Font sizes for the about section */
   --about-text-color: #fbfbfc;
   --about-section-font-size-h2: 2.2rem;
   --about-section-font-size-h3: 2.4rem;
   --about-section-font-size-p: 1.5rem;
-
-  /* Font sizes for the skills section */
   --skills-section-font-size-h2: 2.4rem;
   --skills-section-font-size-p: 1.5rem;
-
-  /* Font size for the projects section */
   --projects-section-font-size-h2: 2.5rem;
   --projects-section-font-size-h4: 2.2rem;
   --projects-section-font-size-p: 1rem;
   --projects-section-font-size-ul: 1.2rem;
-
-  /* Font size for footer section */
   --footer-section-font-size-h2: 1.4rem;
   --footer-section-font-size-h3: 1.2rem;
   --footer-section-font-size-p: 0.5rem;
@@ -42,7 +31,7 @@ body {
   font-size: 18px;
   background: url("../img/website-designing.webp") center center / cover
     no-repeat fixed;
-  overflow-x: hidden; /* Prevent horizontal scroll */
+  overflow-x: hidden;
 }
 
 #home-section,
@@ -51,41 +40,40 @@ body {
 #projects-section,
 #contact-section {
   width: 100%;
-  box-sizing: border-box; /* Include padding and border in element's total width and height */
+  box-sizing: border-box;
 }
 
-/* Navigation */
 nav {
-  overflow: hidden; /* Hide overflow to prevent overlapping */
+  overflow: hidden;
 }
 
 nav ul {
   list-style-type: none;
   padding: 0;
   display: flex;
-  flex-wrap: wrap; /* Allow items to wrap to the next line */
+  flex-wrap: wrap;
   justify-content: center;
-  gap: 10px; /* Adjust space between items */
-  margin-top: 10px; /* Adjust the margin to separate from h1 */
-  width: 100%; /* Ensure nav occupies full width */
+  gap: 10px;
+  margin-top: 10px;
+  width: 100%;
 }
 
 nav ul li {
-  flex: 1 1 100%; /* Allow items to grow and shrink, with a max-width of 100% */
-  max-width: 200px; /* Limit max-width of items */
+  flex: 1 1 100%;
+  max-width: 200px;
 }
 
 nav ul li a {
   text-decoration: none;
   display: block;
-  padding: 10px; /* Adjust padding */
+  padding: 10px;
   background-color: var(--header-nav-color);
   color: var(--header-nav-text-color);
   border-radius: 1.5625rem;
   transition: transform 0.3s ease;
-  text-align: center; /* Ensure text is centered in each link */
-  width: 100%; /* Ensure link occupies full width of li */
-  box-sizing: border-box; /* Include padding and border in element's total width and height */
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 nav ul li a:hover {
@@ -97,31 +85,31 @@ nav ul li a:hover {
 .header-content h1 {
   text-align: center;
   width: 100%;
-  box-sizing: border-box; /* Include padding and border in element's total width and height */
+  box-sizing: border-box;
 }
 
 .header-content {
-  margin-bottom: 20px; /* Add space below h1 */
+  margin-bottom: 20px;
 }
 
 .header-content h1 {
   font-size: var(--home-section-font-size-h1);
   color: var(--header-title-h1-text-color);
   text-align: center;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8); /* Adjusted for readability */
-  margin: 20px 0; /* Adjust top and bottom margin */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+  margin: 20px 0;
 }
 
 .profile-pic {
-  width: 300px; /* Increase the width */
+  width: 300px;
   max-width: 100%;
-  height: auto; /* Maintain aspect ratio */
+  height: auto;
   border-radius: 10px;
   display: flex;
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
-  margin: 0 auto 20px; /* Center align horizontally and add bottom margin */
-  overflow: hidden; /* Ensure the image stays within the rounded border */
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 20px;
+  overflow: hidden;
 }
 
 .profile-pic img {
@@ -132,22 +120,21 @@ nav ul li a:hover {
 }
 
 h2 {
-  font-size: var(--home-section-font-size-h2); /* Base font size in rem */
+  font-size: var(--home-section-font-size-h2);
   text-align: center;
   margin-top: 20px;
   color: var(--header-title-h2-text-color);
   text-shadow: 2px 2px 4px rgba(3, 3, 3, 0.952);
-  width: 100%; /* Ensure h2 occupies full width */
-  box-sizing: border-box; /* Include padding and border in element's total width and height */
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .section {
-  padding: 5vw; /* Adjust padding using viewport width units */
-  width: 100%; /* Ensure section occupies full width */
-  box-sizing: border-box; /* Include padding and border in element's total width and height */
+  padding: 5vw;
+  width: 100%;
+  box-sizing: border-box;
 }
 
-/* About Section */
 #about-section {
   padding: 2rem 0;
   background-color: var(--about-section-bg-color);
@@ -156,11 +143,11 @@ h2 {
 }
 
 .about-content {
-  text-align: left; /* Align text to the left within the container */
+  text-align: left;
   padding: 1rem;
-  max-width: 100%; /* Ensure content stretches to full width on narrow screens */
+  max-width: 100%;
   margin: 0 auto;
-  box-sizing: border-box; /* Include padding and border in element's total width and height */
+  box-sizing: border-box;
 }
 
 .about-text {
@@ -186,51 +173,51 @@ h2 {
   font-size: var(--about-section-font-size-p);
   font-weight: 600;
   margin-bottom: 1rem;
-  line-height: 1.5; /* Improve readability */
+  line-height: 1.5;
 }
-/* Skills Section */
+
 #skills-section {
   background-color: #4ea8de;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 5vw 0; /* Add padding for spacing */
+  padding: 5vw 0;
   text-align: center;
 }
 
 .skills-panel {
   text-shadow: 2px 2px 4px rgba(243, 239, 245, 0.39);
-  padding: 2vw 3vw; /* Adjust padding using viewport width units */
+  padding: 2vw 3vw;
   border-radius: 1.5625rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 90%; /* Adjust width to fit content */
-  max-width: 1000px; /* Set a max-width for larger screens */
-  margin: auto; /* Center the panel horizontally */
+  width: 90%;
+  max-width: 1000px;
+  margin: auto;
 }
 
 .skills-panel h2 {
   font-size: var(--skills-section-font-size-h2);
-  margin-bottom: 1vw; /* Adjust margin using viewport width units */
-  padding: 1vw; /* Adjust padding using viewport width units */
+  margin-bottom: 1vw;
+  padding: 1vw;
 }
 
 .skills-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1.5vw; /* Adjust gap between items */
+  gap: 1.5vw;
   width: 100%;
 }
 
 .skill-item {
-  margin: 1vw; /* Adjust margin using viewport width units */
+  margin: 1vw;
   display: flex;
   flex-direction: column;
   align-items: center;
   box-sizing: border-box;
   text-align: center;
-  transition: transform 0.3s ease; /* Smooth scaling effect */
+  transition: transform 0.3s ease;
 }
 
 .skill-item:hover {
@@ -238,7 +225,7 @@ h2 {
 }
 
 .item-container {
-  padding: 1vw 2vw; /* Adjust padding using viewport width units */
+  padding: 1vw 2vw;
   border-radius: 1.5625rem;
   display: flex;
   flex-direction: column;
@@ -246,10 +233,10 @@ h2 {
 }
 
 .item-container img {
-  width: 80px; /* Set a fixed width for the images */
-  height: 80px; /* Set a fixed height for the images */
-  object-fit: cover; /* Maintain aspect ratio and cover the container */
-  margin-bottom: 1vw; /* Add space below the image */
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  margin-bottom: 1vw;
 }
 
 .item-container p {
@@ -257,7 +244,7 @@ h2 {
   font-weight: 600;
   color: #333333;
 }
-/* Projects Section */
+
 #projects-section {
   padding: 2rem 0;
   background-color: #222b31;
@@ -269,7 +256,7 @@ h2 {
   flex-wrap: wrap;
   justify-content: center;
   gap: 2rem;
-  padding: 0 1rem; /* Added horizontal padding */
+  padding: 0 1rem;
 }
 
 .project-item {
@@ -278,13 +265,13 @@ h2 {
   align-items: center;
   justify-content: center;
   width: 100%;
-  max-width: 400px; /* Set a maximum width for project items */
+  max-width: 400px;
   box-sizing: border-box;
   padding: 1rem;
   background-color: #ffffff;
   border-radius: 8px;
   box-shadow: 0px 2px 2px rgba(67, 14, 212, 0.1);
-  margin-bottom: 2rem; /* Added margin bottom for spacing between projects */
+  margin-bottom: 2rem;
 }
 
 .project-item h4 {
@@ -325,17 +312,18 @@ h2 {
 }
 
 .project-item img {
-  width: 95%; /* Ensure the image spans the full width of its container */
-  max-width: 100%; /* Set maximum width to prevent overflow */
-  height: auto; /* Maintain aspect ratio */
+  width: 95%;
+  max-width: 100%;
+  height: auto;
   border-radius: 8px;
-  object-fit: cover; /* Maintain aspect ratio and cover the area */
-  overflow: hidden; /* Ensure no overflow */
+  object-fit: cover;
+  overflow: hidden;
   transition: transform 0.3s ease;
 }
+
 .project-item img:hover {
-  transform: scale(1.05) rotate(2deg); /* Modified hover effect */
-  box-shadow: 0 0 10px rgba(19, 16, 201, 0.418); /* Modified box-shadow on hover */
+  transform: scale(1.05) rotate(2deg);
+  box-shadow: 0 0 10px rgba(19, 16, 201, 0.418);
 }
 
 .project-item p {
@@ -351,7 +339,7 @@ h2 {
   text-decoration: none;
   display: inline-block;
   padding: 0.5rem 1rem;
-  margin-top: 1rem; /* Added margin top */
+  margin-top: 1rem;
   background-color: #386fd4b6;
   color: #1c1c1c;
   border-radius: 1.562rem;
@@ -359,11 +347,10 @@ h2 {
 }
 
 .project-item .project-link:hover {
-  transform: scale(1.05); /* Modified hover effect */
-  background-color: #2276d6; /* Modified background color on hover */
+  transform: scale(1.05);
+  background-color: #2276d6;
 }
 
-/* Footer content */
 #contact-section {
   background-color: #55666e;
   color: #f8f5f5;
@@ -384,7 +371,7 @@ h2 {
 }
 
 .contact-info {
-  flex: 1 1 300px; /* Initial width for larger screens */
+  flex: 1 1 300px;
   max-width: 100%;
   margin-bottom: 3vw;
   text-align: center;
@@ -405,7 +392,7 @@ h2 {
 }
 
 .follow-me {
-  flex: 1 1 300px; /* Adjust width as needed */
+  flex: 1 1 300px;
   max-width: 100%;
   margin-bottom: 3vw;
   padding: 20px;
@@ -421,7 +408,7 @@ h2 {
 }
 
 .location {
-  flex: 1 1 300px; /* Adjust width as needed */
+  flex: 1 1 300px;
   max-width: 100%;
   margin-bottom: 3vw;
   padding: 20px;
@@ -430,18 +417,18 @@ h2 {
 }
 
 .copywrite {
-  position: relative; /* Use relative positioning */
-  margin-top: auto; /* Push to the bottom */
-  padding: 20px 0; /* Add padding for spacing */
-  text-align: center; /* Center align text */
-  color: #f5efef; /* Text color */
-  font-size: 18px; /* Adjust font size */
+  position: relative;
+  margin-top: auto;
+  padding: 20px 0;
+  text-align: center;
+  color: #f5efef;
+  font-size: 18px;
 }
 
 .copywrite p {
   font-size: 18px;
 }
-/* Media Queries */
+
 @media screen and (min-width: 768px) {
   .header-content h1 {
     font-size: 4rem;
@@ -470,33 +457,33 @@ h2 {
   }
 
   .footer-row {
-    flex-wrap: nowrap; /* Ensure all items are in a row */
+    flex-wrap: nowrap;
   }
 
   .contact-info,
   .follow-me,
   .location {
-    flex: 1 1 auto; /* Allow items to grow and shrink */
-    max-width: none; /* Remove max-width to fill available space */
-    margin-bottom: 0; /* Remove bottom margin to align items */
+    flex: 1 1 auto;
+    max-width: none;
+    margin-bottom: 0;
   }
 }
 
 @media screen and (min-width: 1200px) {
   #main-nav {
     display: flex;
-    justify-content: space-around; /* Adjust spacing evenly */
-    padding: 0 20px; /* Add padding on the sides */
-    max-width: 1200px; /* Limit the width of the nav */
-    margin: 0 auto; /* Center align horizontally */
+    justify-content: space-around;
+    padding: 0 20px;
+    max-width: 1200px;
+    margin: 0 auto;
     margin-bottom: 20px;
   }
 
   #main-nav ul {
-    list-style-type: none; /* Remove default list styles */
+    list-style-type: none;
     display: flex;
-    align-items: center; /* Align items vertically */
-    justify-content: space-between; /* Distribute items evenly */
+    align-items: center;
+    justify-content: space-between;
     width: 100%;
     padding: 0;
     margin: 0;
@@ -509,7 +496,7 @@ h2 {
   #main-nav a {
     text-decoration: none;
     color: #ffffff;
-    padding: 10px 15px; /* Adjust padding for button size */
+    padding: 10px 15px;
     border-radius: 1.5625rem;
     transition: background-color 0.3s ease;
   }
@@ -519,6 +506,6 @@ h2 {
   }
 
   .project-list {
-    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    grid-template-columns: repeat(2, 1fr);
   }
 }
