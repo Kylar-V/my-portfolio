@@ -5,19 +5,24 @@
   --header-nav-text-color: #f0fff0;
   --header-title-h1-text-color: #fafafa;
   --header-title-h2-text-color: #f8f5f5;
+
   --home-section-font-size-h1: 3.5rem;
   --home-section-font-size-h2: 2.5rem;
   --home-section-font-size-h3: 2rem;
+
   --about-text-color: #fbfbfc;
   --about-section-font-size-h2: 2.2rem;
   --about-section-font-size-h3: 2.4rem;
   --about-section-font-size-p: 1.5rem;
+
   --skills-section-font-size-h2: 2.4rem;
   --skills-section-font-size-p: 1.5rem;
+
   --projects-section-font-size-h2: 2.5rem;
   --projects-section-font-size-h4: 2.2rem;
   --projects-section-font-size-p: 1rem;
   --projects-section-font-size-ul: 1.2rem;
+
   --footer-section-font-size-h2: 1.4rem;
   --footer-section-font-size-h3: 1.2rem;
   --footer-section-font-size-p: 0.5rem;
@@ -41,6 +46,11 @@ body {
 #contact-section {
   width: 100%;
   box-sizing: border-box;
+}
+
+#home-section,
+#about-section {
+  background-color: rgba(24, 23, 23, 0.438);
 }
 
 nav {
@@ -137,7 +147,6 @@ h2 {
 
 #about-section {
   padding: 2rem 0;
-  background-color: var(--about-section-bg-color);
   text-align: center;
   color: var(--about-section-text-color);
 }
@@ -152,11 +161,13 @@ h2 {
 
 .about-text {
   color: var(--about-text-color);
+  width: 80%;
   text-shadow: 2px 2px 4px rgba(12, 12, 12, 0.952);
   padding: 20px;
   border-radius: 1.5625rem;
-  box-shadow: 0 4px 8px rgba(17, 17, 17, 0.856);
-  background-color: rgba(24, 23, 23, 0.8);
+  box-shadow: 0 4px 8px rgba(17, 17, 17, 0.733);
+  text-align: left;
+  margin: 0 auto; /* Center the element horizontally */
 }
 
 .about-text h2 {
