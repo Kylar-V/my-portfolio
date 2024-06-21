@@ -167,7 +167,7 @@ h2 {
   border-radius: 1.5625rem;
   box-shadow: 0 4px 8px rgba(17, 17, 17, 0.733);
   text-align: left;
-  margin: 0 auto; /* Center the element horizontally */
+  margin: 0 auto; 
 }
 
 .about-text h2 {
