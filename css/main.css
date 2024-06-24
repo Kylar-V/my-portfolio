@@ -167,7 +167,7 @@ h2 {
   border-radius: 1.5625rem;
   box-shadow: 0 4px 8px rgba(17, 17, 17, 0.733);
   text-align: left;
-  margin: 0 auto; 
+  margin: 0 auto;
 }
 
 .about-text h2 {
@@ -477,6 +477,25 @@ h2 {
     flex: 1 1 auto;
     max-width: none;
     margin-bottom: 0;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  nav ul li a {
+    transition: none;
+  }
+
+  nav ul li a:hover {
+    transform: none;
+    background-color: var(--header-nav-color);
+  }
+
+  .project-item img {
+    transition: none;
+  }
+
+  .project-item img:hover {
+    transform: none;
+    box-shadow: none;
   }
 }
 
