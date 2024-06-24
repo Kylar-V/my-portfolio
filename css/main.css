@@ -188,7 +188,7 @@ h2 {
 }
 
 #skills-section {
-  background-color: #4ea8de;
+  background-color: #ADB2A8;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -210,6 +210,7 @@ h2 {
 
 .skills-panel h2 {
   font-size: var(--skills-section-font-size-h2);
+  color: #fdfdfd;
   margin-bottom: 1vw;
   padding: 1vw;
 }
@@ -258,7 +259,7 @@ h2 {
 
 #projects-section {
   padding: 2rem 0;
-  background-color: #222b31;
+  background-color: #6D7C7F;
   text-align: center;
 }
 
@@ -363,8 +364,8 @@ h2 {
 }
 
 #contact-section {
-  background-color: #55666e;
-  color: #f8f5f5;
+  background-color: #9AADB5;
+  color: #0c0c0c;
   text-align: center;
   padding: 100px 0 0;
 }
@@ -432,7 +433,7 @@ h2 {
   margin-top: auto;
   padding: 20px 0;
   text-align: center;
-  color: #f5efef;
+  color: #020202;
   font-size: 18px;
 }
 
