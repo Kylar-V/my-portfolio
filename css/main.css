@@ -287,14 +287,13 @@ h2 {
   margin-bottom: 2rem;
 }
 
-.project-item h3,h4 {
+.project-item h3,
+h4 {
   font-size: var(--projects-section-font-size-h3);
   width: 100%;
   text-align: center;
   margin-bottom: 1rem;
 }
-
-
 
 .skills-container,
 .tools-container {
@@ -345,7 +344,7 @@ h2 {
   font-size: var(--projects-section-font-size-p);
   margin: 0.5rem 0;
   font-weight: 500;
-  text-align: center;
+  text-align: left;
 }
 
 .project-item .project-link {
@@ -401,10 +400,36 @@ h2 {
 }
 
 .contact-item .icon {
-  width: 18px;
-  height: 18px;
+  width: 20px;
+  height: 20px;
   margin-right: 5px;
 }
+
+
+a[href^="mailto"] {
+  color: inherit; 
+  text-decoration: none; 
+  font-weight: bold;
+}
+
+a[href^="mailto"]:hover {
+  color: #2276d6; 
+  text-decoration: underline; 
+}
+
+
+a[href^="tel"] {
+  color: inherit; 
+  text-decoration: none; 
+  font-weight: bold;
+}
+
+a[href^="tel"]:hover {
+  color: #2276d6; 
+  text-decoration: underline; 
+}
+
+
 
 .follow-me {
   flex: 1 1 300px;
@@ -442,6 +467,26 @@ h2 {
 
 .copywrite p {
   font-size: 18px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  nav ul li a {
+    transition: none;
+  }
+
+  nav ul li a:hover {
+    transform: none;
+    background-color: var(--header-nav-color);
+  }
+
+  .project-item img {
+    transition: none;
+  }
+
+  .project-item img:hover {
+    transform: none;
+    box-shadow: none;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -483,30 +528,11 @@ h2 {
     margin-bottom: 0;
   }
 }
-@media (prefers-reduced-motion: reduce) {
-  nav ul li a {
-    transition: none;
-  }
-
-  nav ul li a:hover {
-    transform: none;
-    background-color: var(--header-nav-color);
-  }
-
-  .project-item img {
-    transition: none;
-  }
-
-  .project-item img:hover {
-    transform: none;
-    box-shadow: none;
-  }
-}
 
 @media screen and (min-width: 1200px) {
   #main-nav {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     padding: 0 20px;
     max-width: 1200px;
     margin: 0 auto;
@@ -517,7 +543,7 @@ h2 {
     list-style-type: none;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
     width: 100%;
     padding: 0;
     margin: 0;
