@@ -54,27 +54,35 @@ body {
   background-color: rgba(24, 23, 23, 0.438);
 }
 
-nav {
-  overflow: hidden;
-}
-
-nav ul {
-  list-style-type: none;
-  padding: 0;
+.nav-bar {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 10px;
-  margin-top: 10px;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--header-nav-color);
   width: 100%;
 }
 
-nav ul li {
-  flex: 1 1 100%;
-  max-width: 200px;
+.nav-toggle {
+  background: none;
+  border: none;
+  color: var(--header-nav-text-color);
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin: 10px;
 }
 
-nav ul li a {
+.nav-links {
+  display: none; /* Hide by default */
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.nav-links li {
+  width: 100%;
+}
+
+.nav-links a {
   text-decoration: none;
   display: block;
   padding: 10px;
@@ -83,11 +91,9 @@ nav ul li a {
   border-radius: 1.5625rem;
   transition: transform 0.3s ease;
   text-align: center;
-  width: 100%;
-  box-sizing: border-box;
 }
 
-nav ul li a:hover {
+.nav-links a:hover {
   transform: scale(1.1);
   background-color: #79b2c4;
 }
@@ -490,8 +496,27 @@ a[href^="tel"]:hover {
 }
 
 @media screen and (min-width: 768px) {
+
   .header-content h1 {
     font-size: 4rem;
+  }
+
+  .nav-bar {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .nav-toggle {
+    display: none; 
+  }
+
+  .nav-links {
+    display: flex; 
+    flex-direction: row;
+  }
+
+  .nav-links li {
+    width: auto;
   }
 
   h2 {
