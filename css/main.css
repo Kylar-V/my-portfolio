@@ -491,7 +491,7 @@ a[href^="tel"]:hover {
   font-size: 18px;
 }
 
-@media (prefers-reduced-motion: reduce) {
+@media (prefers-reduced-motion: no-preference) {
   nav ul li a {
     transition: none;
   }
@@ -508,6 +508,9 @@ a[href^="tel"]:hover {
   .project-item img:hover {
     transform: none;
     box-shadow: none;
+  }
+  html {
+    scroll-behavior: smooth;
   }
 }
 
