@@ -31,31 +31,7 @@
 
 html,
 body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  font-size: 18px;
-  background: url("../img/website-designing.webp") center center / cover
-    no-repeat fixed;
-  overflow-x: hidden;
-}
-
-#home-section,
-#about-section,
-#skills-section,
-#projects-section,
-#contact-section {
-  width: 100%;
-  box-sizing: border-box;
-}
-
-#home-section,
-#about-section {
-  background-color: rgba(24, 23, 23, 0.438);
-}
-
-html,
-body {
+  scroll-behavior: smooth;
   height: 100%;
   margin: 0;
   padding: 0;
