@@ -225,10 +225,12 @@ h2 {
   justify-content: center;
   gap: 1.5vw;
   width: 100%;
+  max-width: 1000px;
+  margin: auto;
 }
 
 .skill-item {
-  flex: 1 1 calc(20% - 3vw); /* 4 items per row */
+  flex: 1 1 21%; /* Approximately 4 items per row by default */
   margin: 1vw;
   display: flex;
   flex-direction: column;
@@ -262,6 +264,8 @@ h2 {
   font-weight: 600;
   color: #f0ebeb;
 }
+
+
 #projects-section {
   padding: 2rem 0;
   background-color: #1a1a1a;
@@ -509,6 +513,7 @@ a[href^="tel"]:hover {
     padding: 10px;
     font-size: 0.9em;
   }
+
   .skills-list {
     display: flex;
     flex-wrap: wrap;
@@ -516,7 +521,7 @@ a[href^="tel"]:hover {
   }
 
   .skill-item {
-    flex: 1 1 calc(25% - 3vw); /* 4 items per row */
+    flex: 1 1 calc(25% - 2vw); /* 4 items per row */
   }
 
   .project-grid {
