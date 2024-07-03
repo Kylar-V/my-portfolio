@@ -1,7 +1,7 @@
 :root {
   --main-font: "Montserrat", sans-serif;
   --secondary-font: "Roboto", sans-serif;
-  --header-nav-color: #141214d0;
+  --header-nav-color: #4d4a4ade;
   --header-nav-text-color: #f0fff0;
   --header-title-h1-text-color: #fafafa;
   --header-title-h2-text-color: #f8f5f5;
@@ -35,7 +35,7 @@ body {
   margin: 0;
   padding: 0;
   font-size: 18px;
-  background: url("../img/website-designing.webp") center center / cover
+  background: url("../img/new-back-ground-image.jpg") center center / cover
     no-repeat fixed;
   overflow-x: hidden;
 }
@@ -51,7 +51,7 @@ body {
 
 #home-section,
 #about-section {
-  background-color: rgba(24, 23, 23, 0.438);
+  background-color: rgba(24, 23, 23, 0.507);
 }
 
 nav {
@@ -215,16 +215,20 @@ h2 {
   color: #f5f2f2e7;
   margin-bottom: 1vw;
   padding: 1vw;
+  text-align: center; /* Center the h2 */
+  width: 100%;
 }
 
 .skills-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 1.5vw;
   width: 100%;
 }
 
 .skill-item {
+  flex: 1 1 calc(20% - 3vw); /* 4 items per row */
   margin: 1vw;
   display: flex;
   flex-direction: column;
@@ -258,7 +262,6 @@ h2 {
   font-weight: 600;
   color: #f0ebeb;
 }
-
 #projects-section {
   padding: 2rem 0;
   background-color: #1a1a1a;
@@ -506,6 +509,15 @@ a[href^="tel"]:hover {
     padding: 10px;
     font-size: 0.9em;
   }
+  .skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .skill-item {
+    flex: 1 1 calc(25% - 3vw); /* 4 items per row */
+  }
 
   .project-grid {
     padding: 0 2rem;
@@ -563,6 +575,16 @@ a[href^="tel"]:hover {
 
   nav a:hover {
     background-color: #79b2c4;
+  }
+
+  .skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .skill-item {
+    flex: 1 1 calc(25% - 3vw); /* 2 items per row */
   }
 
   .project-list {
