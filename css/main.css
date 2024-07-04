@@ -225,7 +225,7 @@ h2 {
 .skills-panel h2 {
   font-size: var(--skills-section-font-size-h2);
   color: #f5f2f2e7;
-  margin-bottom: 1vw;
+  margin-bottom: 4vw;
   padding: 1vw;
   text-align: center; /* Center the h2 */
   width: 100%;
