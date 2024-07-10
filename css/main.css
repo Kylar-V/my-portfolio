@@ -227,7 +227,7 @@ h2 {
   color: #f5f2f2e7;
   margin-bottom: 3vw;
   padding: 1vw;
-  text-align: center; 
+  text-align: center;
   width: 100%;
 }
 
@@ -239,11 +239,11 @@ h2 {
   width: 100%;
   max-width: 1000px;
   margin: auto;
-  padding: 0; 
+  padding: 0;
 }
 
 .skill-item {
-  flex: 1 1 21%; 
+  flex: 1 1 21%;
   margin: 1vw;
   display: flex;
   flex-direction: column;
@@ -264,7 +264,7 @@ h2 {
   flex-direction: column;
   align-items: center;
   width: 100%;
-  height: 100%; 
+  height: 100%;
 }
 
 .item-container img {
@@ -278,7 +278,7 @@ h2 {
   font-size: var(--skills-section-font-size-p);
   font-weight: 600;
   color: #f0ebeb;
-  margin: 0; 
+  margin: 0;
 }
 
 #projects-section {
@@ -311,7 +311,6 @@ h2 {
 .project h2 {
   font-size: var(--projects-section-font-size-h2);
   margin: 20px 0;
-
 }
 
 .project-item h3,
@@ -391,7 +390,6 @@ h4 {
   background-color: #2276d6;
 }
 
-
 .project-item-content {
   display: flex;
   flex-direction: column;
@@ -401,7 +399,7 @@ h4 {
 }
 
 .project-item {
-  min-height: 500px; 
+  min-height: 500px;
 }
 
 #contact-section {
@@ -418,7 +416,7 @@ h4 {
 
 .footer-row {
   display: flex;
-  justify-content: space-around;
+  justify-content: center; /* Center the entire row content */
   gap: 2vw;
   flex-wrap: wrap;
 }
@@ -473,6 +471,10 @@ a[href^="tel"]:hover {
   padding: 20px;
   text-align: center;
   font-size: var(--footer-section-font-size-h3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .social-icons {
@@ -480,6 +482,7 @@ a[href^="tel"]:hover {
   justify-content: center;
   gap: 25px;
   margin-top: 20px;
+  width: 100%;
 }
 
 .location {
@@ -564,7 +567,6 @@ a[href^="tel"]:hover {
   .project h2 {
     font-size: var(--projects-section-font-size-h2);
     margin: 20px 0;
-  
   }
 
   .footer-row {
@@ -630,5 +632,4 @@ a[href^="tel"]:hover {
   .project-item {
     flex: 1 1 30%;
   }
-
 }
